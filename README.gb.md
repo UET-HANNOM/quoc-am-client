@@ -1,5 +1,5 @@
 # Han-Nom Library of Documents (Client) 
-
+*[Tiếng Việt](README.md)*
 ## Description
 
 UI project ( Han-Nom Library )
