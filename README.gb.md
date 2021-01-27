@@ -1,17 +1,17 @@
-# Thư viện số hóa tài liệu Hán-Nôm ( Client ) 
+# Han-Nom Library of Documents (Client) 
 
-*[English](README.gb.md)*
-## Mô tả
+## Description
 
-Trang giao diện cho ứng dụng số hóa thư viện tài liệu Hán Nôm  
-## Bắt đầu
+UI project ( Han-Nom Library )
+
+## Getting Started
 
 ### Dependencies
 
 * Nodejs, npm or yarn
 * Reactjs
 * Firebase
-### Cài đặt
+### Installing
 
 * ```
   git clone https://github.com/phamquyetthang/quoc-am-client.git 
@@ -19,19 +19,20 @@ Trang giao diện cho ứng dụng số hóa thư viện tài liệu Hán Nôm
 * ```
   yarn install
   ```
-* Cũng có thể sử dụng npm để cài đặt project
-### Chạy project
+* You alse use npm to install project
+  
+### Executing program
 
 * ```
   yarn start
   ```
 
-## Tác giả
+## Authors
 
 * github: [Phạm Quyết Thắng](github.com/phamquyetthang)
 * email: *quyetthang.phucchi@gmail.com*
 
-## Phiên Bản
+## Version History
 
 * 0.1
     * Khởi tạo dự án
