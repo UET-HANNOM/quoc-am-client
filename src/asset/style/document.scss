@@ -1,0 +1,20 @@
+.cs-doc-bassic-info {
+  display: flex;
+  flex-direction: row;
+  height: 85vh;
+  flex: 1;
+  margin-top: 1em;
+  .cs-doc-img {
+    flex: 4;
+    padding: 1em;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  .cs-doc-info{
+    flex: 8;
+  }
+}
