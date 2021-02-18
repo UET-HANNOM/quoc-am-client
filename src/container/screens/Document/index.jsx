@@ -15,11 +15,13 @@ import {
   Search,
 } from "@material-ui/icons";
 import React, { useState } from "react";
+import DetailPopup from "./components/DetailPopup";
 
 const DocumentPage = () => {
   const [state, setState] = useState({
     showtool: false,
     showtool2: false,
+    showDetailPopup: false
   });
   const onShowtool = () => {
     setState({
@@ -32,8 +34,12 @@ const DocumentPage = () => {
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
+  const handlePopup = (option) => {
+    setState({...state, showDetailPopup: option})
+  }
   return (
     <Container>
+      <DetailPopup open={state.showDetailPopup} handlePopup={handlePopup} />
       <div className="cs-doc-bassic-info">
         <Card
           className="cs-doc-img"
@@ -61,6 +67,7 @@ const DocumentPage = () => {
                   color="primary"
                   size="small"
                   startIcon={<Search color="info" />}
+                  onClick={()=>handlePopup(true)}
                 >
                   Tra cứu
                 </Button>
@@ -90,6 +97,7 @@ const DocumentPage = () => {
                 color="inherit"
                 size="small"
                 startIcon={<Search color="info" />}
+                onClick={()=>handlePopup(true)}
               >
                 Tra cứu
               </Button>

@@ -1,0 +1,387 @@
+[
+  {
+    "position": [0, 0],
+    "word": {
+      "_id": 0,
+      "type": true,
+      "transliteration": "sông",
+      "translation": "aaa",
+      "sound": "",
+      "to_dictionary": ""
+    }
+  },
+  {
+    "position": [0, 1],
+    "word": {
+      "_id": 2,
+      "type": true,
+      "transliteration": "núi",
+      "translation": "aaa",
+      "sound": "",
+      "to_dictionary": ""
+    }
+  },
+  {
+    "position": [0, 2],
+    "word": {
+      "_id": 3,
+      "type": true,
+      "transliteration": "nước",
+      "translation": "aaa",
+      "sound": "",
+      "to_dictionary": ""
+    }
+  },
+  {
+    "position": [0, 3],
+    "word": {
+      "_id": 4,
+      "type": true,
+      "transliteration": "nam",
+      "translation": "aaa",
+      "sound": "",
+      "to_dictionary": ""
+    }
+  },
+  {
+    "position": [0, 4],
+    "word": {
+      "_id": 5,
+      "type": true,
+      "transliteration": "vua",
+      "translation": "aaa",
+      "sound": "",
+      "to_dictionary": ""
+    }
+  },
+  {
+    "position": [0, 5],
+    "word": {
+      "_id": 6,
+      "type": true,
+      "transliteration": "nam",
+      "translation": "aaa",
+      "sound": "",
+      "to_dictionary": ""
+    }
+  },
+  {
+    "position": [0, 6],
+    "word": {
+      "_id": 7,
+      "type": true,
+      "transliteration": "ở",
+      "translation": "aaa",
+      "sound": "",
+      "to_dictionary": ""
+    }
+  },
+  {
+    "position": [1, 0],
+    "word": {
+      "_id": 8,
+      "type": true,
+      "transliteration": "rành",
+      "translation": "aaa",
+      "sound": "",
+      "to_dictionary": ""
+    }
+  },
+  {
+    "position": [1, 1],
+    "word": {
+      "_id": 9,
+      "type": true,
+      "transliteration": "rành",
+      "translation": "aaa",
+      "sound": "",
+      "to_dictionary": ""
+    }
+  },
+  {
+    "position": [1, 2],
+    "word": {
+      "_id": 10,
+      "type": true,
+      "transliteration": "định",
+      "translation": "aaa",
+      "sound": "",
+      "to_dictionary": ""
+    }
+  },
+  {
+    "position": [1, 3],
+    "word": {
+      "_id": 11,
+      "type": true,
+      "transliteration": "phận",
+      "translation": "aaa",
+      "sound": "",
+      "to_dictionary": ""
+    }
+  },
+  {
+    "position": [1, 4],
+    "word": {
+      "_id": 12,
+      "type": true,
+      "transliteration": "tại",
+      "translation": "aaa",
+      "sound": "",
+      "to_dictionary": ""
+    }
+  },
+  {
+    "position": [1, 5],
+    "word": {
+      "_id": 13,
+      "type": true,
+      "transliteration": "sách",
+      "translation": "aaa",
+      "sound": "",
+      "to_dictionary": ""
+    }
+  },
+  {
+    "position": [1, 6],
+    "word": {
+      "_id": 14,
+      "type": true,
+      "transliteration": "trời",
+      "translation": "aaa",
+      "sound": "",
+      "to_dictionary": ""
+    }
+  },
+  {
+    "position": [2, 0],
+    "word": {
+      "_id": 15,
+      "type": true,
+      "transliteration": "cớ",
+      "translation": "aaa",
+      "sound": "",
+      "to_dictionary": ""
+    }
+  },
+  {
+    "position": [2, 1],
+    "word": {
+      "_id": 16,
+      "type": true,
+      "transliteration": "sao",
+      "translation": "aaa",
+      "sound": "",
+      "to_dictionary": ""
+    }
+  },
+  {
+    "position": [2, 2],
+    "word": {
+      "_id": 17,
+      "type": true,
+      "transliteration": "lũ",
+      "translation": "aaa",
+      "sound": "",
+      "to_dictionary": ""
+    }
+  },
+  {
+    "position": [2, 3],
+    "word": {
+      "_id": 18,
+      "type": true,
+      "transliteration": "giặc",
+      "translation": "aaa",
+      "sound": "",
+      "to_dictionary": ""
+    }
+  },
+  {
+    "position": [2, 4],
+    "word": {
+      "_id": 19,
+      "type": true,
+      "transliteration": "sang",
+      "translation": "aaa",
+      "sound": "",
+      "to_dictionary": ""
+    }
+  },
+  {
+    "position": [2, 5],
+    "word": {
+      "_id": 20,
+      "type": true,
+      "transliteration": "xâm",
+      "translation": "aaa",
+      "sound": "",
+      "to_dictionary": ""
+    }
+  },
+  {
+    "position": [2, 6],
+    "word": {
+      "_id": 21,
+      "type": true,
+      "transliteration": "phạm",
+      "translation": "aaa",
+      "sound": "",
+      "to_dictionary": ""
+    }
+  },
+  {
+    "position": [3, 0],
+    "word": {
+      "_id": 22,
+      "type": true,
+      "transliteration": "chúng",
+      "translation": "aaa",
+      "sound": "",
+      "to_dictionary": ""
+    }
+  },
+  {
+    "position": [3, 1],
+    "word": {
+      "_id": 23,
+      "type": true,
+      "transliteration": "bay",
+      "translation": "aaa",
+      "sound": "",
+      "to_dictionary": ""
+    }
+  },
+  {
+    "position": [3, 2],
+    "word": {
+      "_id": 24,
+      "type": true,
+      "transliteration": "sẽ",
+      "translation": "aaa",
+      "sound": "",
+      "to_dictionary": ""
+    }
+  },
+  {
+    "position": [3, 3],
+    "word": {
+      "_id": 25,
+      "type": true,
+      "transliteration": "bị",
+      "translation": "aaa",
+      "sound": "",
+      "to_dictionary": ""
+    }
+  },
+  {
+    "position": [3, 4],
+    "word": {
+      "_id": 26,
+      "type": true,
+      "transliteration": "đánh",
+      "translation": "aaa",
+      "sound": "",
+      "to_dictionary": ""
+    }
+  },
+  {
+    "position": [3, 5],
+    "word": {
+      "_id": 27,
+      "type": true,
+      "transliteration": "tơi",
+      "translation": "aaa",
+      "sound": "",
+      "to_dictionary": ""
+    }
+  },
+  {
+    "position": [3, 6],
+    "word": {
+      "_id": 28,
+      "type": true,
+      "transliteration": "bời",
+      "translation": "aaa",
+      "sound": "",
+      "to_dictionary": ""
+    }
+  },
+  {
+    "position": [4, 0],
+    "word": {
+      "_id": 29,
+      "type": true,
+      "transliteration": "a",
+      "translation": "aaa",
+      "sound": "",
+      "to_dictionary": ""
+    }
+  },
+  {
+    "position": [4, 1],
+    "word": {
+      "_id": 30,
+      "type": true,
+      "transliteration": "a",
+      "translation": "aaa",
+      "sound": "",
+      "to_dictionary": ""
+    }
+  },
+  {
+    "position": [4, 2],
+    "word": {
+      "_id": 31,
+      "type": true,
+      "transliteration": "a",
+      "translation": "aaa",
+      "sound": "",
+      "to_dictionary": ""
+    }
+  },
+  {
+    "position": [4, 3],
+    "word": {
+      "_id": 32,
+      "type": true,
+      "transliteration": "a",
+      "translation": "aaa",
+      "sound": "",
+      "to_dictionary": ""
+    }
+  },
+  {
+    "position": [4, 4],
+    "word": {
+      "_id": 33,
+      "type": true,
+      "transliteration": "a",
+      "translation": "aaa",
+      "sound": "",
+      "to_dictionary": ""
+    }
+  },
+  {
+    "position": [4, 5],
+    "word": {
+      "_id": 34,
+      "type": true,
+      "transliteration": "a",
+      "translation": "aaa",
+      "sound": "",
+      "to_dictionary": ""
+    }
+  },
+  {
+    "position": [4, 6],
+    "word": {
+      "_id": 35,
+      "type": true,
+      "transliteration": "a",
+      "translation": "aaa",
+      "sound": "",
+      "to_dictionary": ""
+    }
+  }
+]
