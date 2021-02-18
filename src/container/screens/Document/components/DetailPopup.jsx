@@ -16,7 +16,7 @@ import {
 import React, { useState } from "react";
 import CloseIcon from "@material-ui/icons/Close";
 import VolumeUpIcon from '@material-ui/icons/VolumeUp';
-import data from "../../../../asset/sampleData.json";
+import data from "../../../../asset/sampleData2.json";
 const useStyles = makeStyles((theme) => ({
   appBar: {
     position: "relative",
@@ -34,10 +34,11 @@ const DetailPopup = ({ open, handlePopup }) => {
   const [wordSearch, setWordSearch] = useState({
     "_id": 0,
     "type": true,
-    "transliteration": "sông",
+    "text": "庵",
+    "transliteration": "Am",
     "translation": "aaa",
     "sound": "",
-    "to_dictionary": ""
+    "to_dictionary": "https://hvdic.thivien.net/wnom/%E5%BA%B5"
   });
   return (
     <Dialog
@@ -69,7 +70,7 @@ const DetailPopup = ({ open, handlePopup }) => {
           </Button>
         </Toolbar>
       </AppBar> */}
-      <DialogTitle id="responsive-dialog-title">Nam Quốc Sơn Hà</DialogTitle>
+      <DialogTitle id="responsive-dialog-title"> 國音詩集 : Quốc Âm Thi Tập</DialogTitle>
       <DialogContent dividers={false}>
       <Grid container spacing={1}>
         <Grid item xs={8}>
@@ -83,7 +84,7 @@ const DetailPopup = ({ open, handlePopup }) => {
                   onClick={() => setWordSearch(i.word)}
                 >
                   {JSON.stringify(i.position)}
-                  {i.word.transliteration}
+                  {i.word.text}
                 </Button>
               </>
             ))}
@@ -92,11 +93,11 @@ const DetailPopup = ({ open, handlePopup }) => {
         </Grid>
         <Grid item xs={4}>
           <Box p={2}>
-            <p>Từ nôm: 喃</p>
+            <p>Từ nôm: {wordSearch.text}</p>
             <p>Phiên âm : {wordSearch.transliteration}</p>
             <p>Dịch nghĩa: {wordSearch.translation}</p>
             <p>Nghe: <VolumeUpIcon/></p>
-            <a href="/">xem trong từ điển</a>
+            <a href={wordSearch.to_dictionary} >xem trong từ điển</a>
           </Box>
         </Grid>
       </Grid>
