@@ -4,11 +4,11 @@
     "word": {
       "_id": 0,
       "type": true,
-      "text": "滝",
-      "transliteration": "sông",
+      "text": "庵",
+      "transliteration": "Am",
       "translation": "aaa",
       "sound": "",
-      "to_dictionary": ""
+      "to_dictionary": "https://hvdic.thivien.net/wnom/%E5%BA%B5"
     }
   },
   {
@@ -16,10 +16,11 @@
     "word": {
       "_id": 2,
       "type": true,
-      "transliteration": "núi",
+"text": "竹",
+      "transliteration": "trúc",
       "translation": "aaa",
       "sound": "",
-      "to_dictionary": ""
+      "to_dictionary": "https://hvdic.thivien.net/wnom/%E7%AB%B9"
     }
   },
   {
@@ -27,10 +28,11 @@
     "word": {
       "_id": 3,
       "type": true,
-      "transliteration": "nước",
+"text": "軒",
+      "transliteration": "hiên",
       "translation": "aaa",
       "sound": "",
-      "to_dictionary": ""
+      "to_dictionary": "https://hvdic.thivien.net/wnom/%E8%BB%92"
     }
   },
   {
@@ -38,10 +40,11 @@
     "word": {
       "_id": 4,
       "type": true,
-      "transliteration": "nam",
+"text": "枚",
+      "transliteration": "mai",
       "translation": "aaa",
       "sound": "",
-      "to_dictionary": ""
+      "to_dictionary": "https://hvdic.thivien.net/wnom/%E6%A2%85"
     }
   },
   {
@@ -49,10 +52,11 @@
     "word": {
       "_id": 5,
       "type": true,
-      "transliteration": "vua",
+"text": "勜",
+      "transliteration": "ngày",
       "translation": "aaa",
       "sound": "",
-      "to_dictionary": ""
+      "to_dictionary": "https://hvdic.thivien.net/wnom/%F0%A3%88%9C"
     }
   },
   {
@@ -60,10 +64,11 @@
     "word": {
       "_id": 6,
       "type": true,
-      "transliteration": "nam",
+"text": "斘",
+      "transliteration": "tháng",
       "translation": "aaa",
       "sound": "",
-      "to_dictionary": ""
+      "to_dictionary": "https://hvdic.thivien.net/wnom/%F0%A3%8E%83"
     }
   },
   {
@@ -71,10 +76,11 @@
     "word": {
       "_id": 7,
       "type": true,
-      "transliteration": "ở",
+"text": "戈",
+      "transliteration": "qua",
       "translation": "aaa",
       "sound": "",
-      "to_dictionary": ""
+      "to_dictionary": "https://hvdic.thivien.net/wnom/%E6%88%88"
     }
   },
   {
@@ -82,10 +88,11 @@
     "word": {
       "_id": 8,
       "type": true,
-      "transliteration": "rành",
+"text": "是",
+      "transliteration": "Thị",
       "translation": "aaa",
       "sound": "",
-      "to_dictionary": ""
+      "to_dictionary": "https://hvdic.thivien.net/wnom/%E6%88%88"
     }
   },
   {
@@ -93,7 +100,8 @@
     "word": {
       "_id": 9,
       "type": true,
-      "transliteration": "rành",
+"text": "非",
+      "transliteration": "phi",
       "translation": "aaa",
       "sound": "",
       "to_dictionary": ""
@@ -104,7 +112,8 @@
     "word": {
       "_id": 10,
       "type": true,
-      "transliteration": "định",
+"text": "閙",
+      "transliteration": "nào",
       "translation": "aaa",
       "sound": "",
       "to_dictionary": ""
@@ -115,7 +124,8 @@
     "word": {
       "_id": 11,
       "type": true,
-      "transliteration": "phận",
+"text": "典",
+      "transliteration": "đến",
       "translation": "aaa",
       "sound": "",
       "to_dictionary": ""
@@ -126,7 +136,8 @@
     "word": {
       "_id": 12,
       "type": true,
-      "transliteration": "tại",
+      "text": "𡎝",
+      "transliteration": "cõi",
       "translation": "aaa",
       "sound": "",
       "to_dictionary": ""
@@ -137,7 +148,8 @@
     "word": {
       "_id": 13,
       "type": true,
-      "transliteration": "sách",
+      "text": "煙",
+      "transliteration": "yên",
       "translation": "aaa",
       "sound": "",
       "to_dictionary": ""
@@ -148,7 +160,8 @@
     "word": {
       "_id": 14,
       "type": true,
-      "transliteration": "trời",
+      "text": "霞",
+      "transliteration": "hà",
       "translation": "aaa",
       "sound": "",
       "to_dictionary": ""
@@ -159,6 +172,7 @@
     "word": {
       "_id": 15,
       "type": true,
+      "text": "霞",
       "transliteration": "cớ",
       "translation": "aaa",
       "sound": "",
@@ -170,6 +184,7 @@
     "word": {
       "_id": 16,
       "type": true,
+      "text": "霞",
       "transliteration": "sao",
       "translation": "aaa",
       "sound": "",
@@ -181,6 +196,7 @@
     "word": {
       "_id": 17,
       "type": true,
+      "text": "霞",
       "transliteration": "lũ",
       "translation": "aaa",
       "sound": "",
@@ -192,6 +208,7 @@
     "word": {
       "_id": 18,
       "type": true,
+      "text": "霞",
       "transliteration": "giặc",
       "translation": "aaa",
       "sound": "",
@@ -203,6 +220,7 @@
     "word": {
       "_id": 19,
       "type": true,
+      "text": "霞",
       "transliteration": "sang",
       "translation": "aaa",
       "sound": "",
@@ -214,6 +232,7 @@
     "word": {
       "_id": 20,
       "type": true,
+      "text": "霞",
       "transliteration": "xâm",
       "translation": "aaa",
       "sound": "",
@@ -225,6 +244,7 @@
     "word": {
       "_id": 21,
       "type": true,
+      "text": "霞",
       "transliteration": "phạm",
       "translation": "aaa",
       "sound": "",
@@ -236,6 +256,7 @@
     "word": {
       "_id": 22,
       "type": true,
+      "text": "霞",
       "transliteration": "chúng",
       "translation": "aaa",
       "sound": "",
@@ -247,6 +268,7 @@
     "word": {
       "_id": 23,
       "type": true,
+      "text": "霞",
       "transliteration": "bay",
       "translation": "aaa",
       "sound": "",
@@ -258,6 +280,7 @@
     "word": {
       "_id": 24,
       "type": true,
+      "text": "霞",
       "transliteration": "sẽ",
       "translation": "aaa",
       "sound": "",
@@ -269,6 +292,7 @@
     "word": {
       "_id": 25,
       "type": true,
+      "text": "霞",
       "transliteration": "bị",
       "translation": "aaa",
       "sound": "",
@@ -280,6 +304,7 @@
     "word": {
       "_id": 26,
       "type": true,
+      "text": "霞",
       "transliteration": "đánh",
       "translation": "aaa",
       "sound": "",
@@ -291,6 +316,7 @@
     "word": {
       "_id": 27,
       "type": true,
+      "text": "霞",
       "transliteration": "tơi",
       "translation": "aaa",
       "sound": "",
@@ -302,84 +328,8 @@
     "word": {
       "_id": 28,
       "type": true,
+      "text": "霞",
       "transliteration": "bời",
-      "translation": "aaa",
-      "sound": "",
-      "to_dictionary": ""
-    }
-  },
-  {
-    "position": [4, 0],
-    "word": {
-      "_id": 29,
-      "type": true,
-      "transliteration": "a",
-      "translation": "aaa",
-      "sound": "",
-      "to_dictionary": ""
-    }
-  },
-  {
-    "position": [4, 1],
-    "word": {
-      "_id": 30,
-      "type": true,
-      "transliteration": "a",
-      "translation": "aaa",
-      "sound": "",
-      "to_dictionary": ""
-    }
-  },
-  {
-    "position": [4, 2],
-    "word": {
-      "_id": 31,
-      "type": true,
-      "transliteration": "a",
-      "translation": "aaa",
-      "sound": "",
-      "to_dictionary": ""
-    }
-  },
-  {
-    "position": [4, 3],
-    "word": {
-      "_id": 32,
-      "type": true,
-      "transliteration": "a",
-      "translation": "aaa",
-      "sound": "",
-      "to_dictionary": ""
-    }
-  },
-  {
-    "position": [4, 4],
-    "word": {
-      "_id": 33,
-      "type": true,
-      "transliteration": "a",
-      "translation": "aaa",
-      "sound": "",
-      "to_dictionary": ""
-    }
-  },
-  {
-    "position": [4, 5],
-    "word": {
-      "_id": 34,
-      "type": true,
-      "transliteration": "a",
-      "translation": "aaa",
-      "sound": "",
-      "to_dictionary": ""
-    }
-  },
-  {
-    "position": [4, 6],
-    "word": {
-      "_id": 35,
-      "type": true,
-      "transliteration": "a",
       "translation": "aaa",
       "sound": "",
       "to_dictionary": ""
