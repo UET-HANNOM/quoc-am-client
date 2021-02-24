@@ -1,12 +1,10 @@
 import React from 'react'
-import HeaderLayout from './layout/header'
-import DocumentPage from './screens/Document'
+import RouterCenter from './router'
 
 const App = () => {
   return (
     <React.Fragment>
-    <HeaderLayout />
-    <DocumentPage />
+      <RouterCenter />
     </React.Fragment>
   )
 }

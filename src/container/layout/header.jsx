@@ -13,20 +13,14 @@ import AccountCircle from "@material-ui/icons/AccountCircle";
 import MailIcon from "@material-ui/icons/Mail";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import MoreIcon from "@material-ui/icons/MoreVert";
-import { Button } from "@material-ui/core";
-
+import Button from "@material-ui/core/Button";
+import { useHistory } from "react-router-dom";
 const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
   },
   menuButton: {
     marginRight: theme.spacing(2),
-  },
-  title: {
-    display: "none",
-    [theme.breakpoints.up("sm")]: {
-      display: "block",
-    },
   },
   search: {
     position: "relative",
@@ -161,7 +155,10 @@ export default function HeaderLayout() {
       </MenuItem>
     </Menu>
   );
-
+  const history = useHistory();
+  const goHome = () => {
+    history.push("/");
+  };
   return (
     <div className={classes.grow}>
       <AppBar color="primary">
@@ -174,16 +171,11 @@ export default function HeaderLayout() {
           >
             <MenuIcon />
           </IconButton> */}
-          <Typography
-            className={classes.title}
-            component="h2"
-            variant="h5"
-            color="inherit"
-            align="center"
-            noWrap
-          >
-            Thư Viện Hán Nôm
-          </Typography>
+          <Button color="inherit" align="center" onClick={goHome}>
+            <Typography component="h2" variant="h5">
+              Thư Viện Hán Nôm
+            </Typography>
+          </Button>
           <div className={classes.grow} />
           <div className={classes.search}>
             <div className={classes.searchIcon}>
@@ -199,10 +191,16 @@ export default function HeaderLayout() {
             />
           </div>
           <div className={classes.sectionDesktop}>
-            {
-              1 == 1 ? <>
-              <Button color="inherit" variant="outlined" className="cs-mr-1">Sing in</Button> 
-              <Button color="inherit" variant="outlined">Sing up</Button></> :
+            {1 == 1 ? (
+              <>
+                <Button color="inherit" variant="outlined" className="cs-mr-1">
+                  Sing in
+                </Button>
+                <Button color="inherit" variant="outlined">
+                  Sing up
+                </Button>
+              </>
+            ) : (
               <>
                 <IconButton aria-label="show 4 new mails" color="inherit">
                   <Badge badgeContent={4} color="secondary">
@@ -228,7 +226,7 @@ export default function HeaderLayout() {
                   <AccountCircle />
                 </IconButton>
               </>
-            }
+            )}
           </div>
           <div className={classes.sectionMobile}>
             <IconButton
