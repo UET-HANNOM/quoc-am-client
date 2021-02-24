@@ -6,6 +6,7 @@ import {
   Switch,
 } from "react-router-dom";
 import HeaderLayout from "../layout/header";
+import Intro from "../layout/Intro";
 import DashboardPage from "../screens/Dashboard";
 import DocumentPage from "../screens/Document";
 
@@ -32,6 +33,7 @@ const RouterCenter = () => {
   return (
     <BrowserRouter>
       <HeaderLayout />
+      <Intro />
       <Switch>
         <Redirect exact from="/" to="/dashboard" />
         {publicRouter}

@@ -15,6 +15,8 @@ import NotificationsIcon from "@material-ui/icons/Notifications";
 import MoreIcon from "@material-ui/icons/MoreVert";
 import Button from "@material-ui/core/Button";
 import { useHistory } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { playIntroAction } from "../../redux/actions";
 const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
@@ -156,9 +158,13 @@ export default function HeaderLayout() {
     </Menu>
   );
   const history = useHistory();
+  const dispatch = useDispatch();
   const goHome = () => {
     history.push("/");
   };
+  const startIntro = () => {
+    dispatch(playIntroAction(true))
+  }
   return (
     <div className={classes.grow}>
       <AppBar color="primary">
@@ -176,6 +182,7 @@ export default function HeaderLayout() {
               Thư Viện Hán Nôm
             </Typography>
           </Button>
+         
           <div className={classes.grow} />
           <div className={classes.search}>
             <div className={classes.searchIcon}>
@@ -191,6 +198,9 @@ export default function HeaderLayout() {
             />
           </div>
           <div className={classes.sectionDesktop}>
+          <Button color="inherit" className="cs-intro-start cs-mr-1" onClick={startIntro}>
+              Hướng dẫn
+          </Button>
             {1 == 1 ? (
               <>
                 <Button color="inherit" variant="outlined" className="cs-mr-1">

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Button from "@material-ui/core/Button";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
@@ -9,7 +9,6 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
-import ReactJoyride from "react-joyride";
 import { CardActionArea } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
 
@@ -42,45 +41,13 @@ const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 const DashboardPage = () => {
   const classes = useStyles();
-  const [state, setState] = useState({
-    steps: [
-      {
-        content: <h2>Let's begin our journey!</h2>,
-        locale: { skip: <strong aria-label="skip">S-K-I-P</strong> },
-        placement: "center",
-        target: "body",
-      },
-      {
-        target: ".my-first-step",
-        content: "This is my awesome feature!",
-      },
-      {
-        target: ".my-other-step",
-        content: "This another awesome feature!",
-      },
-    ],
-    runJoyride: false,
-  });
-  const startIntro = () => {
-    setState({
-      ...state,
-      runJoyride: true,
-    });
-  };
   const history = useHistory();
   const gotoDocumentPage = (id) => {
-    history.push(`/document/${id}`)
-  }
+    history.push(`/document/${id}`);
+  };
   return (
     <>
-      <ReactJoyride
-        steps={state.steps}
-        continuous={true}
-        run={state.runJoyride}
-        scrollToFirstStep={true}
-        showProgress={true}
-        showSkipButton={true}
-      />
+      
       <CssBaseline />
       <main>
         <div className={classes.heroContent}>
@@ -111,7 +78,7 @@ const DashboardPage = () => {
                   <Button
                     variant="contained"
                     color="primary"
-                    onClick={startIntro}
+                    // onClick={startIntro}
                   >
                     Main call to action
                   </Button>
