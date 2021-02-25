@@ -167,7 +167,7 @@ export default function HeaderLayout() {
   }
   return (
     <div className={classes.grow}>
-      <AppBar color="primary">
+      <AppBar color="primary" className="cs-header">
         <Toolbar>
           {/* <IconButton
             edge="start"

@@ -5,8 +5,10 @@ import {
   Route,
   Switch,
 } from "react-router-dom";
+import FooterLayout from "../layout/footer";
 import HeaderLayout from "../layout/header";
 import Intro from "../layout/Intro";
+import SidebarLayout from "../layout/Sidebar";
 import DashboardPage from "../screens/Dashboard";
 import DocumentPage from "../screens/Document";
 
@@ -32,12 +34,14 @@ const publicRouter = PUBLIC_ROUTER.map(({ path, component }, key) => (
 const RouterCenter = () => {
   return (
     <BrowserRouter>
-      <HeaderLayout />
       <Intro />
+      <HeaderLayout />
+      {/* <SidebarLayout /> */}
       <Switch>
         <Redirect exact from="/" to="/dashboard" />
         {publicRouter}
       </Switch>
+      <FooterLayout />
     </BrowserRouter>
   );
 };
