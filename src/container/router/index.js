@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   BrowserRouter,
   Redirect,
@@ -32,11 +32,26 @@ const publicRouter = PUBLIC_ROUTER.map(({ path, component }, key) => (
 ));
 
 const RouterCenter = () => {
+  const [state, setState] = useState({
+    openMenu: false
+  })
+  const toggleDrawer = (open) => (event) => {
+    if (
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
+      return;
+    }
+    setState({
+      ...state,
+      openMenu: open
+    });
+  };
   return (
     <BrowserRouter>
       <Intro />
-      <HeaderLayout />
-      {/* <SidebarLayout /> */}
+      <HeaderLayout toggleDrawer={toggleDrawer}/>
+      <SidebarLayout open={state.openMenu} toggleDrawer={toggleDrawer}/>
       <Switch>
         <Redirect exact from="/" to="/dashboard" />
         {publicRouter}

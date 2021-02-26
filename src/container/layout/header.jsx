@@ -17,6 +17,7 @@ import Button from "@material-ui/core/Button";
 import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { playIntroAction } from "../../redux/actions";
+import MenuIcon from '@material-ui/icons/Menu';
 const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
@@ -76,7 +77,7 @@ const useStyles = makeStyles((theme) => ({
   appBarSpacer: theme.mixins.toolbar,
 }));
 
-export default function HeaderLayout() {
+export default function HeaderLayout({toggleDrawer}) {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -169,14 +170,15 @@ export default function HeaderLayout() {
     <div className={classes.grow}>
       <AppBar color="primary" className="cs-header">
         <Toolbar>
-          {/* <IconButton
+          <IconButton
             edge="start"
             className={classes.menuButton}
             color="inherit"
             aria-label="open drawer"
+            onClick={toggleDrawer(true)}
           >
             <MenuIcon />
-          </IconButton> */}
+          </IconButton>
           <Button color="inherit" align="center" onClick={goHome}>
             <Typography component="h2" variant="h5">
               Thư Viện Hán Nôm
