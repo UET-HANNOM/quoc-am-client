@@ -47,7 +47,7 @@ const DocumentPage = () => {
           onMouseLeave={() => setState({ ...state, showtool2: false })}
         >
           <img
-            src="https://github.com/phamquyetthang/quoc-am-client/blob/sprint1/create-structure/src/asset/test_mocban.png?raw=true"
+            src="https://github.com/phamquyetthang/quoc-am-client/blob/master/src/asset/test_mocban.png?raw=true"
             alt="tai lieu"
           />
           <div className="cs-doc-tools">
@@ -66,7 +66,7 @@ const DocumentPage = () => {
                   variant="outlined"
                   color="primary"
                   size="small"
-                  startIcon={<Search color="info" />}
+                  startIcon={<Search color="action" />}
                   onClick={()=>handlePopup(true)}
                 >
                   Tra cứu
@@ -96,7 +96,7 @@ const DocumentPage = () => {
               <Button
                 color="inherit"
                 size="small"
-                startIcon={<Search color="info" />}
+                startIcon={<Search color="primary" />}
                 onClick={()=>handlePopup(true)}
               >
                 Tra cứu

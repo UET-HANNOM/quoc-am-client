@@ -13,20 +13,17 @@ import AccountCircle from "@material-ui/icons/AccountCircle";
 import MailIcon from "@material-ui/icons/Mail";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import MoreIcon from "@material-ui/icons/MoreVert";
-import { Button } from "@material-ui/core";
-
+import Button from "@material-ui/core/Button";
+import { useHistory } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { playIntroAction } from "../../redux/actions";
+import MenuIcon from '@material-ui/icons/Menu';
 const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
   },
   menuButton: {
     marginRight: theme.spacing(2),
-  },
-  title: {
-    display: "none",
-    [theme.breakpoints.up("sm")]: {
-      display: "block",
-    },
   },
   search: {
     position: "relative",
@@ -80,7 +77,7 @@ const useStyles = makeStyles((theme) => ({
   appBarSpacer: theme.mixins.toolbar,
 }));
 
-export default function HeaderLayout() {
+export default function HeaderLayout({toggleDrawer}) {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -161,29 +158,33 @@ export default function HeaderLayout() {
       </MenuItem>
     </Menu>
   );
-
+  const history = useHistory();
+  const dispatch = useDispatch();
+  const goHome = () => {
+    history.push("/");
+  };
+  const startIntro = () => {
+    dispatch(playIntroAction(true))
+  }
   return (
     <div className={classes.grow}>
-      <AppBar color="primary">
+      <AppBar color="primary" className="cs-header">
         <Toolbar>
-          {/* <IconButton
+          <IconButton
             edge="start"
             className={classes.menuButton}
             color="inherit"
             aria-label="open drawer"
+            onClick={toggleDrawer(true)}
           >
             <MenuIcon />
-          </IconButton> */}
-          <Typography
-            className={classes.title}
-            component="h2"
-            variant="h5"
-            color="inherit"
-            align="center"
-            noWrap
-          >
-            Thư Viện Hán Nôm
-          </Typography>
+          </IconButton>
+          <Button color="inherit" align="center" onClick={goHome}>
+            <Typography component="h2" variant="h5">
+              Thư Viện Hán Nôm
+            </Typography>
+          </Button>
+         
           <div className={classes.grow} />
           <div className={classes.search}>
             <div className={classes.searchIcon}>
@@ -199,10 +200,19 @@ export default function HeaderLayout() {
             />
           </div>
           <div className={classes.sectionDesktop}>
-            {
-              1 == 1 ? <>
-              <Button color="inherit" variant="outlined" className="cs-mr-1">Sing in</Button> 
-              <Button color="inherit" variant="outlined">Sing up</Button></> :
+          <Button color="inherit" className="cs-intro-start cs-mr-1" onClick={startIntro}>
+              Hướng dẫn
+          </Button>
+            {1 == 1 ? (
+              <>
+                <Button color="inherit" variant="outlined" className="cs-mr-1">
+                  Sing in
+                </Button>
+                <Button color="inherit" variant="outlined">
+                  Sing up
+                </Button>
+              </>
+            ) : (
               <>
                 <IconButton aria-label="show 4 new mails" color="inherit">
                   <Badge badgeContent={4} color="secondary">
@@ -228,7 +238,7 @@ export default function HeaderLayout() {
                   <AccountCircle />
                 </IconButton>
               </>
-            }
+            )}
           </div>
           <div className={classes.sectionMobile}>
             <IconButton
