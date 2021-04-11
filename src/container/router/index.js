@@ -9,13 +9,11 @@ import FooterLayout from "../layout/footer";
 import HeaderLayout from "../layout/header";
 import Intro from "../layout/Intro";
 import SidebarLayout from "../layout/Sidebar";
-import DashboardPage from "../screens/Dashboard";
-import DocumentPage from "../screens/Document";
 
 export const PRIVATE_ROUTER = [];
 export const PUBLIC_ROUTER = [
-  { exact: true, path: "/dashboard", component: DashboardPage },
-  { exact: true, path: "/document/:id", component: DocumentPage },
+  // { exact: true, path: "/dashboard", component: DashboardPage },
+  // { exact: true, path: "/document/:id", component: DocumentPage },
 ];
 function FadingRoute({ component: Component, myprops=null, ...rest }) {
   return (
@@ -53,7 +51,7 @@ const RouterCenter = () => {
       <HeaderLayout toggleDrawer={toggleDrawer}/>
       <SidebarLayout open={state.openMenu} toggleDrawer={toggleDrawer}/>
       <Switch>
-        <Redirect exact from="/" to="/dashboard" />
+        <Redirect exact from="/" to="/" />
         {publicRouter}
       </Switch>
       <FooterLayout />

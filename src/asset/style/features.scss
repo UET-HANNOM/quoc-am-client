@@ -1,0 +1,16 @@
+.cs-welcome {
+    h2 {
+        text-align: center;
+      }
+  .cs-welcome-features {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    // background-color: #2196F3;
+    padding: 0 8em;
+    
+    .cs-welcome-icon {
+      font-size: 2rem;
+      color: rgb(100, 21, 255);
+    }
+  }
+}

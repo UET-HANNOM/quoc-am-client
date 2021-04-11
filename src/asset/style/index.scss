@@ -1,4 +1,6 @@
 @import "./document.scss";
+@import "./features.scss";
+@import "./general.scss";
 *{
   margin: 0;
   padding: 0;
@@ -14,4 +16,14 @@
 .cs-intro-start{
   font-size: 65% !important;
   padding: 0.5em !important;
+}
+
+.cs-my-animation{
+  transition: 1s;
+}
+img{
+	width: 100%;
+ 	height: 100%;
+	object-fit: cover;
+	object-position: center; 
 }
