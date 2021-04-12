@@ -6,9 +6,9 @@ import WelcomeScreen from './screens/Welcome'
 const App = () => {
   return (
     <React.Fragment>
-      {/* <RouterCenter /> */}
+      <RouterCenter />
       {/* <WelcomeScreen /> */}
-      <UploadImagePreview />
+      {/* <UploadImagePreview /> */}
     </React.Fragment>
   )
 }

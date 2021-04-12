@@ -68,11 +68,11 @@ const FeatureComponent = () => {
   return (
     <div>
       <div className="cs-welcome">
-        <h2>Our Professional Services</h2>
+        <h2>Những thứ chúng tôi có: </h2>
         <div className="cs-welcome-features">
           {cards.map((card, i) => (
             <div key={i}>
-              <Card>
+              <Card className="cs-welcome-features-card">
                 <i className={`${card.icons} cs-welcome-icon`}></i>
                 <span className="textContainer">
                   <span className="title">{card.title || "Fully Secure"}</span>

@@ -1,3 +1,4 @@
+@import "./layout.scss";
 @import "./document.scss";
 @import "./features.scss";
 @import "./general.scss";
@@ -19,7 +20,7 @@
 }
 
 .cs-my-animation{
-  transition: 1s;
+  transition: 600ms;
 }
 img{
 	width: 100%;

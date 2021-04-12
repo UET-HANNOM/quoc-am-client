@@ -1,3 +1,5 @@
+import MyAnimation from "container/helpers/AnimationRevealPage";
+import WelcomeScreen from "container/screens/Welcome";
 import React, { useState } from "react";
 import {
   BrowserRouter,
@@ -8,11 +10,11 @@ import {
 import FooterLayout from "../layout/footer";
 import HeaderLayout from "../layout/header";
 import Intro from "../layout/Intro";
-import SidebarLayout from "../layout/Sidebar";
+// import SidebarLayout from "../layout/Sidebar";
 
 export const PRIVATE_ROUTER = [];
 export const PUBLIC_ROUTER = [
-  // { exact: true, path: "/dashboard", component: DashboardPage },
+  { exact: true, path: "/welcome", component: WelcomeScreen },
   // { exact: true, path: "/document/:id", component: DocumentPage },
 ];
 function FadingRoute({ component: Component, myprops=null, ...rest }) {
@@ -48,13 +50,16 @@ const RouterCenter = () => {
   return (
     <BrowserRouter>
       <Intro />
+      
       <HeaderLayout toggleDrawer={toggleDrawer}/>
-      <SidebarLayout open={state.openMenu} toggleDrawer={toggleDrawer}/>
+      {/* <SidebarLayout open={state.openMenu} toggleDrawer={toggleDrawer}/> */}
       <Switch>
-        <Redirect exact from="/" to="/" />
+        <Redirect exact from="/" to="/welcome" />
         {publicRouter}
       </Switch>
+      <MyAnimation>
       <FooterLayout />
+      </MyAnimation>
     </BrowserRouter>
   );
 };

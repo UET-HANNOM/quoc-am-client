@@ -1,0 +1,22 @@
+header{
+    padding: 1em;
+    margin-bottom: 2em;
+    a{
+        text-decoration: none;
+        font-size: 120%;
+        color: #000;
+    }
+    a:hover{
+        color: rgb(100,21,255);
+    }
+    .header-title{
+        color: rgb(100,21,255);
+    }
+}
+footer {
+  margin-top: 10em;
+  a {
+    color: white;
+    line-height: unset;
+  }
+}
