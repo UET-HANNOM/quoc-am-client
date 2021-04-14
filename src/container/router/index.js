@@ -1,4 +1,5 @@
 import MyAnimation from "container/helpers/AnimationRevealPage";
+import DictionaryScreen from "container/screens/Dictionary";
 import LibraryScreen from "container/screens/Library";
 import WelcomeScreen from "container/screens/Welcome";
 import React, { useState } from "react";
@@ -11,6 +12,7 @@ export const PRIVATE_ROUTER = [];
 export const PUBLIC_ROUTER = [
   { exact: true, path: "/welcome", component: WelcomeScreen },
   { exact: true, path: "/library", component: LibraryScreen },
+  { exact: true, path: "/dictionary", component: DictionaryScreen },
   // { exact: true, path: "/document/:id", component: DocumentPage },
 ];
 function FadingRoute({ component: Component, myprops = null, ...rest }) {

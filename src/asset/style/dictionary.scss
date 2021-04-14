@@ -1,0 +1,25 @@
+.cs-dictionary{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .cs-dic-choose-type{
+        width: 30vw;
+        margin: 1em;
+    }
+    .cs-dic-search-word{
+        // background-color: crimson;
+        position: relative;
+        // padding: 0.5em;
+        width: 30vw;
+        border: 1px solid thistle;
+        border-radius: 8px;
+        img{
+            width: 1em;
+            height: 1em;
+            // background-color: ;
+        }
+        input{
+            margin: 0.5em;
+        }
+    }
+}
