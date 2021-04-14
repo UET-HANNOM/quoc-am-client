@@ -24,17 +24,19 @@ const Card = styled.div`
   }
 `;
 
-const FeatureComponent = () => {
+const FeatureComponent = ({goto}) => {
   const cards = [
     {
       icons: "fi-rr-book",
       title: "Thư viện",
+      link: "/library",
       description:
         "Tra cứu các tài liệu Hán - Nôm trong kho tàng được chúng tôi lưu trữ",
     },
     {
       iconSvg: translateIcon,
       title: "Từ điển",
+      link: "/dictionary",
       description:
         "Tra cứu các tài liệu Hán - Nôm trong kho tàng được chúng tôi lưu trữ",
     },
@@ -42,24 +44,28 @@ const FeatureComponent = () => {
     {
       icons: "fi-rr-mode-landscape",
       title: "Tra cứu nhanh",
+      link: "/quickscan",
       description:
         "Sử dụng công cự AI để quét nhanh tài liệu Hán - Nôm của bạn và chuyển thành văn bản chữ quốc ngữ",
     },
     {
       icons: "fi-rr-cursor",
       title: "Tham gia dán nhãn",
+      link: "/labling",
       description:
         "Tra cứu tài liệu Hán - Nôm dạng ảnh bằng cách sử dụng công cụ AI của chúng tôi",
     },
     {
       icons: "fi-rr-edit",
       title: "Đóng góp",
+      link: "/react",
       description:
         "Đóng góp vào thư viện bằng cách đăng và viết bài về những tài liệu bạn sưu tập được",
     },
     {
       icons: "fi-rr-comment",
       title: "Diễn đàn",
+      link: "/group",
       description:
         "Tra cứu tài liệu Hán - Nôm dạng ảnh bằng cách sử dụng công cụ AI của chúng tôi",
     },
@@ -71,7 +77,7 @@ const FeatureComponent = () => {
         <h2>Những thứ chúng tôi có: </h2>
         <div className="cs-welcome-features">
           {cards.map((card, i) => (
-            <div key={i}>
+            <div key={i} onClick={()=>goto(card.link)}>
               <Card className="cs-welcome-features-card">
                 {card.iconSvg ? <img src={card.iconSvg} alt="anh"/> : <i className={`${card.icons} cs-welcome-icon`}></i>}
                 <span className="textContainer">

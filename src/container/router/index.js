@@ -1,4 +1,6 @@
-import MyAnimation from "container/helpers/AnimationRevealPage";
+// import MyAnimation from "container/helpers/AnimationRevealPage";
+import AuthScreen from "container/screens/Auth";
+import QuickLookupScreen from "container/screens/QuickLookup";
 import WelcomeScreen from "container/screens/Welcome";
 import React, { useState } from "react";
 import {
@@ -15,6 +17,8 @@ import Intro from "../layout/Intro";
 export const PRIVATE_ROUTER = [];
 export const PUBLIC_ROUTER = [
   { exact: true, path: "/welcome", component: WelcomeScreen },
+  { exact: true, path: "/quickscan", component: QuickLookupScreen },
+  { exact: true, path: "/auth", component: AuthScreen },
   // { exact: true, path: "/document/:id", component: DocumentPage },
 ];
 function FadingRoute({ component: Component, myprops=null, ...rest }) {
@@ -53,13 +57,15 @@ const RouterCenter = () => {
       
       <HeaderLayout toggleDrawer={toggleDrawer}/>
       {/* <SidebarLayout open={state.openMenu} toggleDrawer={toggleDrawer}/> */}
+      <div className="cs-main-body">
       <Switch>
         <Redirect exact from="/" to="/welcome" />
         {publicRouter}
       </Switch>
-      <MyAnimation>
+      </div>
+      {/* <MyAnimation> */}
       <FooterLayout />
-      </MyAnimation>
+      {/* </MyAnimation> */}
     </BrowserRouter>
   );
 };
