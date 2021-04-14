@@ -1,29 +1,23 @@
 import MyAnimation from "container/helpers/AnimationRevealPage";
+import LibraryScreen from "container/screens/Library";
 import WelcomeScreen from "container/screens/Welcome";
 import React, { useState } from "react";
-import {
-  BrowserRouter,
-  Redirect,
-  Route,
-  Switch,
-} from "react-router-dom";
+import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import FooterLayout from "../layout/footer";
 import HeaderLayout from "../layout/header";
 import Intro from "../layout/Intro";
 // import SidebarLayout from "../layout/Sidebar";
-
 export const PRIVATE_ROUTER = [];
 export const PUBLIC_ROUTER = [
   { exact: true, path: "/welcome", component: WelcomeScreen },
+  { exact: true, path: "/library", component: LibraryScreen },
   // { exact: true, path: "/document/:id", component: DocumentPage },
 ];
-function FadingRoute({ component: Component, myprops=null, ...rest }) {
+function FadingRoute({ component: Component, myprops = null, ...rest }) {
   return (
     <Route
       {...rest}
-      render={routeProps => (
-          <Component {...routeProps} myprops={myprops}/>
-      )}
+      render={(routeProps) => <Component {...routeProps} myprops={myprops} />}
     />
   );
 }
@@ -33,8 +27,8 @@ const publicRouter = PUBLIC_ROUTER.map(({ path, component }, key) => (
 
 const RouterCenter = () => {
   const [state, setState] = useState({
-    openMenu: false
-  })
+    openMenu: false,
+  });
   const toggleDrawer = (open) => (event) => {
     if (
       event.type === "keydown" &&
@@ -44,22 +38,22 @@ const RouterCenter = () => {
     }
     setState({
       ...state,
-      openMenu: open
+      openMenu: open,
     });
   };
   return (
     <BrowserRouter>
       <Intro />
-      
-      <HeaderLayout toggleDrawer={toggleDrawer}/>
+
+      <HeaderLayout toggleDrawer={toggleDrawer} />
       {/* <SidebarLayout open={state.openMenu} toggleDrawer={toggleDrawer}/> */}
       <Switch>
         <Redirect exact from="/" to="/welcome" />
         {publicRouter}
       </Switch>
-      <MyAnimation>
+      {/* <MyAnimation> */}
       <FooterLayout />
-      </MyAnimation>
+      {/* </MyAnimation> */}
     </BrowserRouter>
   );
 };

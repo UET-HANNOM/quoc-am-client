@@ -1,0 +1,79 @@
+.cs-library {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 0 3em;
+  .cs-library-card {
+    height: 65vh;
+    width: 25vw;
+    border: 0.5px solid thistle;
+    border-radius: 8px;
+    margin: 2em;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    .cs-l-c-img {
+      flex: 7.5;
+      position: relative;
+      overflow: hidden;
+      img {
+        position: relative;
+        height: 100%;
+      }
+      i {
+        position: absolute;
+        z-index: 2;
+        background-color: white;
+        padding: 0.5em;
+        border-radius: 50%;
+        line-height: 1;
+        height: 1em;
+        width: 1em;
+        right: 0.5em;
+        bottom: 0.5em;
+        cursor: pointer;
+      }
+      p {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #f7fafc;
+        padding: 1em;
+        // display: none;
+      }
+    //   .fi-rr-cross-circle {
+    //     display: none;
+    //   }
+    //   .fi-rr-info {
+    //     display: block;
+    //   }
+    //   #cs-card-show-info:checked ~ #cs-library-card-info {
+    //     display: block;
+    //   }
+    //   #cs-card-show-info:checked ~ .fi-rr-cross-circle {
+    //     display: block;
+    //   }
+    //   #cs-card-show-info:checked ~ .fi-rr-info {
+    //     display: none;
+    //   }
+    }
+    .cs-l-c-title {
+      flex: 1.5;
+      padding-left: 0.5em;
+      // padding-top: 0.5em;
+    }
+    button {
+      flex: 1;
+      border: 0.5px solid thistle;
+      border-end-end-radius: 8px;
+      outline: none;
+      border: none;
+      background-color: rgb(100, 21, 255);
+      color: white;
+      font-size: 120%;
+      cursor: pointer;
+    }
+  }
+}
