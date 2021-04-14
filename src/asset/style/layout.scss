@@ -1,22 +1,77 @@
-header{
-    padding: 1em;
-    margin-bottom: 2em;
-    a{
-        text-decoration: none;
-        font-size: 120%;
-        color: #000;
-    }
-    a:hover{
-        color: rgb(100,21,255);
-    }
-    .header-title{
-        color: rgb(100,21,255);
-    }
+.cs-main-body {
+  min-height: calc(100vh - 20em);
+}
+header {
+  padding: 1em;
+  margin-bottom: 1em;
+  a {
+    text-decoration: none;
+    font-size: 120%;
+    color: #000;
+  }
+  a:hover {
+    color: rgb(100, 21, 255);
+  }
+  .header-title {
+    color: rgb(100, 21, 255);
+  }
 }
 footer {
   margin-top: 10em;
   a {
     color: white;
     line-height: unset;
+  }
+}
+
+.cs-auth {
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  border-radius: 0.5rem;
+  max-width: 1280px;
+  --bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
+  color: rgb(26, 32, 44);
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  width: 50vw;
+  padding: 2em;
+  align-items: center;
+  .cs-auth-main {
+    h1 {
+      text-align: center;
+      margin-bottom: 1.5em;
+    }
+    .cs-auth-social {
+      a {
+        max-width: 100% !important;
+      }
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      input {
+        // width: 100%;
+        padding: 1rem 2rem;
+        border-radius: 0.5rem;
+        font-weight: 500;
+        background-color: rgb(247, 250, 252);
+        border-width: 0;
+        color: rgb(160, 174, 192);
+        font-size: 0.875rem;
+        margin-top: 1em;
+        outline: none;
+      }
+      input::before{
+        background-color: yellow;
+      }
+      button{
+        outline: none;
+        border: none;
+      }
+    }
   }
 }

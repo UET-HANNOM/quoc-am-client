@@ -1,0 +1,16 @@
+.cs-quick-scan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .cs-q-c-btn-trans{
+        padding: 12px 32px;
+        background-color: rgb(100,21,255);
+        color: rgb(247,250,252);
+        font-size: 0.875rem;
+        font-weight: 600;
+        border: none;
+        outline: none;
+        border-radius: 0.25rem;
+    }
+}

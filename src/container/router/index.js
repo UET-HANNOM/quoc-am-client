@@ -1,6 +1,9 @@
 import MyAnimation from "container/helpers/AnimationRevealPage";
 import DictionaryScreen from "container/screens/Dictionary";
 import LibraryScreen from "container/screens/Library";
+// import MyAnimation from "container/helpers/AnimationRevealPage";
+import AuthScreen from "container/screens/Auth";
+import QuickLookupScreen from "container/screens/QuickLookup";
 import WelcomeScreen from "container/screens/Welcome";
 import React, { useState } from "react";
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
@@ -13,6 +16,8 @@ export const PUBLIC_ROUTER = [
   { exact: true, path: "/welcome", component: WelcomeScreen },
   { exact: true, path: "/library", component: LibraryScreen },
   { exact: true, path: "/dictionary", component: DictionaryScreen },
+  { exact: true, path: "/quickscan", component: QuickLookupScreen },
+  { exact: true, path: "/auth", component: AuthScreen },
   // { exact: true, path: "/document/:id", component: DocumentPage },
 ];
 function FadingRoute({ component: Component, myprops = null, ...rest }) {
@@ -49,10 +54,12 @@ const RouterCenter = () => {
 
       <HeaderLayout toggleDrawer={toggleDrawer} />
       {/* <SidebarLayout open={state.openMenu} toggleDrawer={toggleDrawer}/> */}
-      <Switch>
-        <Redirect exact from="/" to="/welcome" />
-        {publicRouter}
-      </Switch>
+      <div className="cs-main-body">
+        <Switch>
+          <Redirect exact from="/" to="/welcome" />
+          {publicRouter}
+        </Switch>
+      </div>
       {/* <MyAnimation> */}
       <FooterLayout />
       {/* </MyAnimation> */}
