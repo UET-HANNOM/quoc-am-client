@@ -10,7 +10,7 @@ import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import FooterLayout from "../layout/footer";
 import HeaderLayout from "../layout/header";
 import Intro from "../layout/Intro";
-// import SidebarLayout from "../layout/Sidebar";
+import EachBookScreen from "container/screens/Library/EachBook";
 export const PRIVATE_ROUTER = [];
 export const PUBLIC_ROUTER = [
   { exact: true, path: "/welcome", component: WelcomeScreen },
@@ -18,7 +18,7 @@ export const PUBLIC_ROUTER = [
   { exact: true, path: "/dictionary", component: DictionaryScreen },
   { exact: true, path: "/quickscan", component: QuickLookupScreen },
   { exact: true, path: "/auth", component: AuthScreen },
-  // { exact: true, path: "/document/:id", component: DocumentPage },
+  { exact: true, path: "/library/:idbook", component: EachBookScreen },
 ];
 function FadingRoute({ component: Component, myprops = null, ...rest }) {
   return (
@@ -28,8 +28,8 @@ function FadingRoute({ component: Component, myprops = null, ...rest }) {
     />
   );
 }
-const publicRouter = PUBLIC_ROUTER.map(({ path, component }, key) => (
-  <FadingRoute path={path} component={component} key={key}></FadingRoute>
+const publicRouter = PUBLIC_ROUTER.map(({exact, path, component }, key) => (
+  <FadingRoute exact={exact} path={path} component={component} key={key}></FadingRoute>
 ));
 
 const RouterCenter = () => {

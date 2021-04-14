@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router";
 
 const LibraryScreen = () => {
   const [showInfoId, setShowInfoId] = useState(null);
@@ -9,10 +10,14 @@ const LibraryScreen = () => {
       setShowInfoId(null);
     }
   };
+  const history = useHistory()
+  const goto = (id) => {
+    history.push(`/library/${id}`)
+  }
   return (
     <div className="cs-library">
       {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((i) => (
-        <div className="cs-library-card">
+        <div className="cs-library-card" onClick={() => goto(i)}>
           <div className="cs-l-c-img">
             <img src="https://source.unsplash.com/random" alt="" />
             <i
@@ -27,11 +32,12 @@ const LibraryScreen = () => {
             </p>
           </div>
           <div className="cs-l-c-title">
-            <p>Tiêu đề</p>
-            {i}
-            <p>Tác giả</p>
+            <p>Tiêu đề: Lorem, ipsum dolor sit amet consectetur adipisicing</p>
+            <p>
+              Tác giả: Velit dolore in 
+            </p>
           </div>
-          <button>xem</button>
+          <button>Xem thêm</button>
         </div>
       ))}
     </div>

@@ -1,3 +1,6 @@
+body {
+  background-color: #f7fafc;
+}
 .cs-main-body {
   min-height: calc(100vh - 20em);
 }
@@ -65,10 +68,10 @@ footer {
         margin-top: 1em;
         outline: none;
       }
-      input::before{
+      input::before {
         background-color: yellow;
       }
-      button{
+      button {
         outline: none;
         border: none;
       }
