@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/quoc-am-client/static/css/main.98f7610b.chunk.css",
-    "main.js": "/quoc-am-client/static/js/main.3caa4c93.chunk.js",
-    "main.js.map": "/quoc-am-client/static/js/main.3caa4c93.chunk.js.map",
+    "main.js": "/quoc-am-client/static/js/main.90516aff.chunk.js",
+    "main.js.map": "/quoc-am-client/static/js/main.90516aff.chunk.js.map",
     "runtime-main.js": "/quoc-am-client/static/js/runtime-main.87052cdf.js",
     "runtime-main.js.map": "/quoc-am-client/static/js/runtime-main.87052cdf.js.map",
     "static/js/2.8b5d25d4.chunk.js": "/quoc-am-client/static/js/2.8b5d25d4.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.87052cdf.js",
     "static/js/2.8b5d25d4.chunk.js",
     "static/css/main.98f7610b.chunk.css",
-    "static/js/main.3caa4c93.chunk.js"
+    "static/js/main.90516aff.chunk.js"
   ]
 }
