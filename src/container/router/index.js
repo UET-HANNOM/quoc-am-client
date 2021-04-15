@@ -49,7 +49,7 @@ const RouterCenter = () => {
     });
   };
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="https://phamquyetthang.github.io/quoc-am-client/">
       <Intro />
 
       <HeaderLayout toggleDrawer={toggleDrawer} />
