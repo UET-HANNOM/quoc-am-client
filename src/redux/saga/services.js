@@ -1,10 +1,11 @@
+import axios from "axios";
 import { postService } from "container/common/callApi"
 
 
-export const loginService = async (email, password) => {
+export const loginService = async (email, password) => {debugger
     try {
-        const res = await postService("/api/auth", {email, password});debugger
-        return res
+        // return await postService("/api/auth", {email, password});
+        return await axios.post("localhost:5000/api/auth",JSON.stringify({email, password}))
     } catch (error) {
         throw error;
     }

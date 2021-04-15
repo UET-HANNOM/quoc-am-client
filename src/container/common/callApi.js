@@ -9,29 +9,31 @@ export const HOST_API = "localhost:5000";
 //   FORBIDDEN: 403,
 // };
 export const postService = async (url, body) => {
+  debugger;
   try {
     const headers = {
-      Accept: "application/json ",
+      Accept: "application/json",
       "Content-Type": "application/json",
     };
     const token = store.getState().token;
+    debugger;
     if (token) {
       headers["x-auth-token"] = token;
+      debugger;
     }
 
     const response = await axios.post(
       `${HOST_API + url}`,
       JSON.stringify(body),
-      {
-        headers: headers,
-        withCredentials: true,
-      }
+      { headers }
     );
-
+    console.log(response)
+    debugger;
     if (response.status >= 200 && response.status <= 210) {
       return response.data;
     }
   } catch (error) {
+    debugger;
     if (error.response) {
       const errorMessage = error.response.data.error.split(":");
       const res = {
@@ -41,6 +43,7 @@ export const postService = async (url, body) => {
       };
       throw res;
     } else {
+      debugger;
       throw error;
     }
   }
