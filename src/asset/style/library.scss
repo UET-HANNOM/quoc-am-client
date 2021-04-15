@@ -1,10 +1,10 @@
 .cs-library {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto auto;
   padding: 0 3em;
   .cs-library-card {
-    height: 65vh;
-    width: 25vw;
+    height: 50vh;
+    width: 20vw;
     border: 0.5px solid thistle;
     border-radius: 8px;
     margin: 2em;
