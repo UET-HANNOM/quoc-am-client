@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/quoc-am-client/static/css/main.98f7610b.chunk.css",
-    "main.js": "/quoc-am-client/static/js/main.73e3d914.chunk.js",
-    "main.js.map": "/quoc-am-client/static/js/main.73e3d914.chunk.js.map",
+    "main.js": "/quoc-am-client/static/js/main.20450a55.chunk.js",
+    "main.js.map": "/quoc-am-client/static/js/main.20450a55.chunk.js.map",
     "runtime-main.js": "/quoc-am-client/static/js/runtime-main.87052cdf.js",
     "runtime-main.js.map": "/quoc-am-client/static/js/runtime-main.87052cdf.js.map",
-    "static/js/2.2ae0984a.chunk.js": "/quoc-am-client/static/js/2.2ae0984a.chunk.js",
-    "static/js/2.2ae0984a.chunk.js.map": "/quoc-am-client/static/js/2.2ae0984a.chunk.js.map",
+    "static/js/2.8b5d25d4.chunk.js": "/quoc-am-client/static/js/2.8b5d25d4.chunk.js",
+    "static/js/2.8b5d25d4.chunk.js.map": "/quoc-am-client/static/js/2.8b5d25d4.chunk.js.map",
     "index.html": "/quoc-am-client/index.html",
     "static/css/main.98f7610b.chunk.css.map": "/quoc-am-client/static/css/main.98f7610b.chunk.css.map",
-    "static/js/2.2ae0984a.chunk.js.LICENSE.txt": "/quoc-am-client/static/js/2.2ae0984a.chunk.js.LICENSE.txt",
+    "static/js/2.8b5d25d4.chunk.js.LICENSE.txt": "/quoc-am-client/static/js/2.8b5d25d4.chunk.js.LICENSE.txt",
     "static/media/google.92b8040a.svg": "/quoc-am-client/static/media/google.92b8040a.svg",
     "static/media/language.fdbb403e.svg": "/quoc-am-client/static/media/language.fdbb403e.svg",
     "static/media/twitter.88d497cc.svg": "/quoc-am-client/static/media/twitter.88d497cc.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.87052cdf.js",
-    "static/js/2.2ae0984a.chunk.js",
+    "static/js/2.8b5d25d4.chunk.js",
     "static/css/main.98f7610b.chunk.css",
-    "static/js/main.73e3d914.chunk.js"
+    "static/js/main.20450a55.chunk.js"
   ]
 }
