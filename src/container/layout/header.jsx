@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { css } from "styled-components/macro";
 // import logo from "../../images/logo.svg";
 import useAnimatedNavToggler from "container/helpers/useAnimatedNavToggler";
+import { useHistory } from "react-router";
 
 const Header = tw.header`
   flex justify-between items-center
@@ -58,6 +59,7 @@ const HeaderLayout = ({
   className,
   collapseBreakpointClass = "lg",
 }) => {
+  const history = useHistory();
   const defaultLinks = [
     <NavLinks key={1}>
       <NavLink href="/#">About</NavLink>
@@ -78,8 +80,10 @@ const HeaderLayout = ({
     collapseBreakPointCssMap[collapseBreakpointClass];
 
   const defaultLogoLink = (
-    <LogoLink href="/" className="header-title">
-      {/* <img src={logo} alt="logo" /> */}
+    <LogoLink
+      className="header-title"
+      onClick={() => history.push("/")}
+    >
       UET Hán - Nôm
     </LogoLink>
   );

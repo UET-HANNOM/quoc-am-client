@@ -1,25 +1,26 @@
 import {handleActions} from 'redux-actions';
-import { playIntroAction } from '../actions';
+import { playIntroAction, setAuthAction, setTokenAction } from '../actions';
 const initialState = {
   isLoading: false,
   playIntro: false,
+  isAuth: false,
+  useInfo: {},
+  token: "",
 };
 export default handleActions(
   {
-    // [onLoadingAction.toString()]: (state) => ({...state, isLoading: true}),
-    // [offLoadingAction.toString()]: (state) => ({...state, isLoading: false}),
-    // [setDataAction.toString()]: (state, {payload}) => ({
-    //   ...state,
-    //   [payload.dataName]: payload.result,
-    // }),
-    // [setTokenAction.toString()]:(state,{payload})=>({
-    //   ...state,
-    //   token:payload
-    // }),
     [playIntroAction.toString()]: (state, {payload})=>({
       ...state,
       playIntro: payload
-    })
+    }),
+    [setTokenAction.toString()]: (state, {payload})=>({
+      ...state,
+      token: payload
+    }),
+    [setAuthAction.toString()]: (state, {payload})=>({
+      ...state,
+      useInfo: payload.useInfo,
+    }),
   },
   initialState,
 );

@@ -28,8 +28,13 @@ function FadingRoute({ component: Component, myprops = null, ...rest }) {
     />
   );
 }
-const publicRouter = PUBLIC_ROUTER.map(({exact, path, component }, key) => (
-  <FadingRoute exact={exact} path={path} component={component} key={key}></FadingRoute>
+const publicRouter = PUBLIC_ROUTER.map(({ exact, path, component }, key) => (
+  <FadingRoute
+    exact={exact}
+    path={path}
+    component={component}
+    key={key}
+  ></FadingRoute>
 ));
 
 const RouterCenter = () => {
@@ -48,21 +53,19 @@ const RouterCenter = () => {
       openMenu: open,
     });
   };
+  const path = window.location.pathname;
+  const inAuthScreen = path.includes("/auth");
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Intro />
-
-      <HeaderLayout toggleDrawer={toggleDrawer} />
-      {/* <SidebarLayout open={state.openMenu} toggleDrawer={toggleDrawer}/> */}
+      {!inAuthScreen && <HeaderLayout toggleDrawer={toggleDrawer} />}
       <div className="cs-main-body">
         <Switch>
           <Redirect exact from="/" to="/welcome" />
           {publicRouter}
         </Switch>
       </div>
-      {/* <MyAnimation> */}
-      <FooterLayout />
-      {/* </MyAnimation> */}
+      {!inAuthScreen && <FooterLayout />}
     </BrowserRouter>
   );
 };
