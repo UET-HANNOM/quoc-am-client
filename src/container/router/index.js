@@ -49,7 +49,7 @@ const RouterCenter = () => {
     });
   };
   return (
-    <BrowserRouter basename="https://phamquyetthang.github.io/quoc-am-client/">
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Intro />
 
       <HeaderLayout toggleDrawer={toggleDrawer} />
