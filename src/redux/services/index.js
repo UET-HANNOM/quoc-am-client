@@ -17,3 +17,25 @@ export const loginService = ({ email, password, callback }) => {
       });
   };
 };
+export const signUpService = ({
+  email,
+  password,
+  lastname,
+  firstname,
+  callback,
+}) => {
+  return async (dispatch) => {
+    dispatch(loadingAction(true));
+    await postService("/api/users", { email, password, lastname, firstname })
+      .then((result) => {
+        callback(true);
+        dispatch(setTokenAction(result));
+      })
+      .catch((err) => {
+        callback(err);
+      })
+      .finally(() => {
+        dispatch(loadingAction(false));
+      });
+  };
+};

@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { css } from "styled-components/macro";
 import { Provider } from "react-redux";
 import "./asset/style/index.scss";
 import App from "./container/App";

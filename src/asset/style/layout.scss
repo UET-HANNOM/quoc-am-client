@@ -19,6 +19,10 @@ header {
   .header-title {
     color: rgb(100, 21, 255);
   }
+  .cs-nav{
+    display: flex;
+    align-items: center;
+  }
 }
 footer {
   margin-top: 10em;

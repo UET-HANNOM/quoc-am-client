@@ -17,7 +17,6 @@ export const PUBLIC_ROUTER = [
   { exact: true, path: "/library", component: LibraryScreen },
   { exact: true, path: "/dictionary", component: DictionaryScreen },
   { exact: true, path: "/quickscan", component: QuickLookupScreen },
-  { exact: true, path: "/auth", component: AuthScreen },
   { exact: true, path: "/library/:idbook", component: EachBookScreen },
 ];
 function FadingRoute({ component: Component, myprops = null, ...rest }) {
@@ -55,7 +54,8 @@ const RouterCenter = () => {
   };
   const path = window.location.pathname;
   const inAuthScreen = path.includes("/auth");
-  const loading = useSelector(state => state.isLoading)
+  const loading = useSelector(state => state.isLoading);
+  const isAuth = useSelector(state => state.isAuth);
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <LoadingBar load={loading} />
@@ -65,6 +65,7 @@ const RouterCenter = () => {
         <Switch>
           <Redirect exact from="/" to="/welcome" />
           {publicRouter}
+          {!isAuth && <Route exact path="/auth/:type" component={AuthScreen}/>}
         </Switch>
       </div>
       {!inAuthScreen && <FooterLayout />}

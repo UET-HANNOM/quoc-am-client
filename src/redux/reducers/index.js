@@ -19,7 +19,8 @@ export default handleActions(
     }),
     [setTokenAction.toString()]: (state, {payload})=>({
       ...state,
-      token: payload
+      token: payload,
+      isAuth: true,
     }),
     [setAuthAction.toString()]: (state, {payload})=>({
       ...state,
