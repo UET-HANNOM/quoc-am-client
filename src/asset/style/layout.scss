@@ -70,19 +70,26 @@ footer {
           font-weight: 500;
           background-color: rgb(247, 250, 252);
           border-width: 0;
-          color: rgb(160, 174, 192);
+          color: black;
           font-size: 0.875rem;
           margin-top: 1em;
           outline: none;
-        }
-        input::before {
-          background-color: yellow;
         }
         button {
           outline: none;
           border: none;
         }
+        button:disabled{
+          opacity: 0.6;
+        }
       }
     }
   }
+}
+
+.cs-loading-bar{
+  position: fixed;
+  top: 0;
+  z-index: 6;
+  width: 100vw;
 }

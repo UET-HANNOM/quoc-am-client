@@ -1,14 +1,13 @@
-import { all, call, fork, put, takeLatest } from "redux-saga/effects";
-import { loginAction, setTokenAction } from "redux/actions";
+import { all, call, fork, put, takeEvery, takeLatest } from "redux-saga/effects";
+import { loadingAction, loginAction, setTokenAction } from "redux/actions";
 import { loginService } from "./services";
 
 function* loginWatch() {
-  yield takeLatest(loginAction, function* ({ payload }) {
-    debugger;
-    try { debugger;
+  yield takeEvery(loginAction, function* ({ payload }) { debugger
+    try {
+      yield put(loadingAction(true));
       const { email, password, callback } = payload;
       const result = yield call(loginService, email, password);
-     
       if (result) {
         callback(true);
         yield put(setTokenAction(result.token));
@@ -16,8 +15,9 @@ function* loginWatch() {
         callback(false);
       }
     } catch (error) {
-      debugger;
       throw error;
+    } finally {
+      yield put(loadingAction(false));
     }
   });
 }

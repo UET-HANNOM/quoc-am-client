@@ -1,7 +1,7 @@
 import axios from "axios";
 import { store } from "redux/store";
 
-export const HOST_API = "localhost:5000";
+export const HOST_API = "http://localhost:5000";
 // const RESPONSE_STATUS = {
 //   SUCCESS: 200,
 //   BAD_REQUEST: 400,
@@ -9,17 +9,15 @@ export const HOST_API = "localhost:5000";
 //   FORBIDDEN: 403,
 // };
 export const postService = async (url, body) => {
-  debugger;
   try {
     const headers = {
       Accept: "application/json",
       "Content-Type": "application/json",
     };
     const token = store.getState().token;
-    debugger;
+
     if (token) {
       headers["x-auth-token"] = token;
-      debugger;
     }
 
     const response = await axios.post(
@@ -27,13 +25,10 @@ export const postService = async (url, body) => {
       JSON.stringify(body),
       { headers }
     );
-    console.log(response)
-    debugger;
     if (response.status >= 200 && response.status <= 210) {
       return response.data;
     }
   } catch (error) {
-    debugger;
     if (error.response) {
       const errorMessage = error.response.data.error.split(":");
       const res = {
@@ -43,7 +38,6 @@ export const postService = async (url, body) => {
       };
       throw res;
     } else {
-      debugger;
       throw error;
     }
   }
@@ -159,3 +153,20 @@ export const deleteService = async (url, params) => {
     }
   }
 };
+export async function postData(url = "", data = {}) {
+  // Default options are marked with *
+  const response = await fetch(url, {
+    method: "POST", // *GET, POST, PUT, DELETE, etc.
+    mode: "cors", // no-cors, *cors, same-origin
+    cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: "same-origin", // include, *same-origin, omit
+    headers: {
+      "Content-Type": "application/json",
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    redirect: "follow", // manual, *follow, error
+    referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+    body: JSON.stringify(data), // body data type must match "Content-Type" header
+  });
+  return response.json(); // parses JSON response into native JavaScript objects
+}

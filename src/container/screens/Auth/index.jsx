@@ -6,6 +6,8 @@ import googleIconImageSrc from "./google.svg";
 import twitterIconImageSrc from "./twitter.svg";
 import { useDispatch } from "react-redux";
 import { loginAction } from "redux/actions";
+import { validateValue } from "container/common/utils";
+import { CircularProgress } from "@material-ui/core";
 
 const Container = tw.div`min-h-screen bg-primary-900 text-white font-medium flex justify-center -m-8`;
 
@@ -47,7 +49,11 @@ const AuthScreen = () => {
     email: "",
     password: "",
   });
-  const dispatch = useDispatch()
+  const [verify, setVerify] = useState({
+    email: false,
+    password: false,
+  });
+  const dispatch = useDispatch();
   const handleChange = (event) => {
     setUserInfo({
       ...userInfo,
@@ -59,10 +65,17 @@ const AuthScreen = () => {
     let body = {
       email: userInfo.email,
       password: userInfo.password,
-      callback: (success) => alert(success) 
-    }
-    dispatch(loginAction(body))
-  }
+      callback: (success) => alert(success),
+    };
+    dispatch(loginAction(body));
+  };
+  const checkVerify = (event) => {
+    let test = validateValue(event.target.value, event.target.name);
+    setVerify({
+      ...verify,
+      [event.target.name]: test
+    })
+  };
   return (
     <Container className="cs-auth">
       <div className="cs-auth-contain">
@@ -93,6 +106,7 @@ const AuthScreen = () => {
                 name="email"
                 value={userInfo.email}
                 onChange={handleChange}
+                onBlur={checkVerify}
               />
               <input
                 type="password"
@@ -100,10 +114,12 @@ const AuthScreen = () => {
                 name="password"
                 value={userInfo.password}
                 onChange={handleChange}
+                onBlur={checkVerify}
               />
-              <SubmitButton type="submit">
+              <SubmitButton type="submit" disabled={!verify.email || !verify.password}>
                 <i className="fi-rr-sign-in"></i>
                 <span className="text">Đăng nhập</span>
+                {/* <CircularProgress className="cs-spinner" size={16} color="secondary" /> */}
               </SubmitButton>
             </form>
             <p tw="mt-6 text-xs text-gray-600 text-center">

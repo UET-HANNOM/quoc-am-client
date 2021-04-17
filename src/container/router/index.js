@@ -11,6 +11,8 @@ import FooterLayout from "../layout/footer";
 import HeaderLayout from "../layout/header";
 import Intro from "../layout/Intro";
 import EachBookScreen from "container/screens/Library/EachBook";
+import LoadingBar from "container/layout/loadingbar";
+import { useSelector } from "react-redux";
 export const PRIVATE_ROUTER = [];
 export const PUBLIC_ROUTER = [
   { exact: true, path: "/welcome", component: WelcomeScreen },
@@ -55,8 +57,10 @@ const RouterCenter = () => {
   };
   const path = window.location.pathname;
   const inAuthScreen = path.includes("/auth");
+  const loading = useSelector(state => state.isLoading)
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <LoadingBar load={loading} />
       <Intro />
       {!inAuthScreen && <HeaderLayout toggleDrawer={toggleDrawer} />}
       <div className="cs-main-body">
