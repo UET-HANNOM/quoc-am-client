@@ -1,7 +1,5 @@
-import MyAnimation from "container/helpers/AnimationRevealPage";
 import DictionaryScreen from "container/screens/Dictionary";
 import LibraryScreen from "container/screens/Library";
-// import MyAnimation from "container/helpers/AnimationRevealPage";
 import AuthScreen from "container/screens/Auth";
 import QuickLookupScreen from "container/screens/QuickLookup";
 import WelcomeScreen from "container/screens/Welcome";

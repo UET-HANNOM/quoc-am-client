@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import tw from "twin.macro";
 import styled from "styled-components";
-import { css } from "styled-components/macro";
 // import logo from "../../images/logo.svg";
 import useAnimatedNavToggler from "container/helpers/useAnimatedNavToggler";
 import { useHistory } from "react-router";

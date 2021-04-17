@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import tw from "twin.macro";
-import styled from "styled-components";
-import { css } from "styled-components/macro"; //eslint-disable-line
+import styled from "styled-components"; //eslint-disable-line
 import googleIconImageSrc from "./google.svg";
 import twitterIconImageSrc from "./twitter.svg";
 import { useDispatch } from "react-redux";
-import { loginAction } from "redux/actions";
 import { validateValue } from "container/common/utils";
-import { CircularProgress } from "@material-ui/core";
+import { loginService } from "redux/services";
 
 const Container = tw.div`min-h-screen bg-primary-900 text-white font-medium flex justify-center -m-8`;
 
@@ -67,7 +65,7 @@ const AuthScreen = () => {
       password: userInfo.password,
       callback: (success) => alert(success),
     };
-    dispatch(loginAction(body));
+    dispatch(loginService(body))
   };
   const checkVerify = (event) => {
     let test = validateValue(event.target.value, event.target.name);
@@ -123,10 +121,10 @@ const AuthScreen = () => {
               </SubmitButton>
             </form>
             <p tw="mt-6 text-xs text-gray-600 text-center">
-              <a href={""}>Quên mật khẩu ?</a>
+              <a href="/">Quên mật khẩu ?</a>
             </p>
             <p tw="mt-8 text-sm text-gray-600 text-center">
-              Bạn chưa có tài khoản? <a href={""}>Đăng ký</a>
+              Bạn chưa có tài khoản? <a  href="/">Đăng ký</a>
             </p>
           </div>
         </div>

@@ -8,7 +8,7 @@ export const HOST_API = "http://localhost:5000";
 //   INTERNAL_SERVER_ERROR: 500,
 //   FORBIDDEN: 403,
 // };
-export const postService = async (url, body) => {
+export const postService = async (url, body) => { debugger
   try {
     const headers = {
       Accept: "application/json",
@@ -30,12 +30,7 @@ export const postService = async (url, body) => {
     }
   } catch (error) {
     if (error.response) {
-      const errorMessage = error.response.data.error.split(":");
-      const res = {
-        status: error.response.status,
-        errorMessage: errorMessage[errorMessage.length - 1],
-        data: error.response.data,
-      };
+      const res =  error.response.data.message;
       throw res;
     } else {
       throw error;
