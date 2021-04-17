@@ -1,32 +1,55 @@
-.cs-upload-image-preview{
-    margin: 1em;
-    overflow: hidden;
-    padding: 1em;
-    .cs-upload-icon{
-        font-size: 3em;
-        color: rgb(100,21,255);
-    }
+.cs-upload-image-preview {
+  margin: 1em;
+  overflow: hidden;
+  padding: 1em;
+  .cs-upload-icon {
+    font-size: 3em;
+    color: rgb(100, 21, 255);
+  }
 }
-.cs-preview{
-    position: relative;
-    max-height: 48em;
-    max-width: 48em;
-    border-width: 2px;
-    border-style: dashed;
-    --border-opacity: 1;
-    border-color: rgba(100,21,255,var(--border-opacity));
-    border-radius: 0.5rem;
-    padding: 0.5em;
-    .cs-upload-icon{
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translateX(-50%) translateY(-50%);
-        font-size: 3em;
-        color: rgba(100,21,255, 0.5);
-    }
+.cs-preview {
+  position: relative;
+  max-height: 48em;
+  max-width: 48em;
+  border-width: 2px;
+  border-style: dashed;
+  --border-opacity: 1;
+  border-color: rgba(100, 21, 255, var(--border-opacity));
+  border-radius: 0.5rem;
+  padding: 0.5em;
+  .cs-upload-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 3em;
+    color: rgba(100, 21, 255, 0.5);
+  }
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
+}
+.cs-btn {
+  margin-top: 1.25rem;
+  //   letter-spacing: 0.025em;
+  font-weight: 600;
+  background-color: rgb(100, 21, 255);
+  color: rgb(247, 250, 252);
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 0.5rem;
+  //   transition-property: all;
+  //   transition-duration: 300ms;
+  //   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  line-height: inherit;
+}
+button {
+  cursor: pointer;
 }
