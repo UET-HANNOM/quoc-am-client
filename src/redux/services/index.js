@@ -1,4 +1,4 @@
-import { postService } from "container/common/callApi";
+import { getService, postService } from "container/common/callApi";
 import { loadingAction, setTokenAction } from "redux/actions";
 
 export const loginService = ({ email, password, callback }) => {
@@ -39,3 +39,19 @@ export const signUpService = ({
       });
   };
 };
+
+export const getPostInGroup = ({page, callback}) => {
+  return async (dispatch) => {
+    dispatch(loadingAction(true));
+    await getService(`/api/v1/posts/paging/${page}`)
+      .then((result) => {
+        callback(result, false);
+      })
+      .catch((err) => {
+        callback("", err);
+      })
+      .finally(() => {
+        dispatch(loadingAction(false));
+      });
+  };
+}

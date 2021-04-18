@@ -56,18 +56,18 @@ const FeatureComponent = ({goto}) => {
         "Tra cứu tài liệu Hán - Nôm dạng ảnh bằng cách sử dụng công cụ AI của chúng tôi",
     },
     {
+      icons: "fi-rr-comment",
+      title: "Diễn đàn",
+      link: "/forum",
+      description:
+        "Tra cứu tài liệu Hán - Nôm dạng ảnh bằng cách sử dụng công cụ AI của chúng tôi",
+    },
+    {
       icons: "fi-rr-edit",
       title: "Đóng góp",
       link: "/react",
       description:
         "Đóng góp vào thư viện bằng cách đăng và viết bài về những tài liệu bạn sưu tập được",
-    },
-    {
-      icons: "fi-rr-comment",
-      title: "Diễn đàn",
-      link: "/group",
-      description:
-        "Tra cứu tài liệu Hán - Nôm dạng ảnh bằng cách sử dụng công cụ AI của chúng tôi",
     },
   ];
 

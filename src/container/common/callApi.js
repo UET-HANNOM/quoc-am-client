@@ -37,7 +37,7 @@ export const postService = async (url, body) => { debugger
     }
   }
 };
-export const getService = async (url, params) => {
+export const getService = async (url, params = "") => {
   try {
     const headers = {
       Accept: "application/json",
