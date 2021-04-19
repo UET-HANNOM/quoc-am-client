@@ -13,6 +13,7 @@ import LoadingBar from "container/layout/loadingbar";
 import { useSelector } from "react-redux";
 import ForumScreen from "container/screens/Forum";
 import ReadingInForumScreen from "container/screens/Forum/Reading";
+import WritingScreen from "container/screens/Forum/Writing";
 
 export const PRIVATE_ROUTER = [];
 export const PUBLIC_ROUTER = [
@@ -23,6 +24,7 @@ export const PUBLIC_ROUTER = [
   { exact: true, path: "/library/:idbook", component: EachBookScreen },
   { exact: true, path: "/forum", component: ForumScreen },
   { exact: true, path: "/forum/:id", component: ReadingInForumScreen },
+  { exact: true, path: "/writing", component: WritingScreen },
 ];
 function FadingRoute({ component: Component, myprops = null, ...rest }) {
   return (

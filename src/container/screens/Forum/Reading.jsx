@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import tw from "twin.macro";
 import styled from "styled-components/macro";
-import { useParams } from "react-router";
+import { useHistory, useParams } from "react-router";
 import { useDispatch } from "react-redux";
 import { getPostById } from "redux/services";
 import { Alert, AlertTitle } from "@material-ui/lab";
-import moment from "moment"
+import moment from "moment";
 export const ContentWithPaddingXl = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
 export const SectionHeading = tw.h1`text-4xl sm:text-5xl font-black tracking-wide text-center`;
 const ReadingInForumScreen = () => {
@@ -28,6 +28,7 @@ const ReadingInForumScreen = () => {
     dispatch(getPostById(body));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
+  const history = useHistory()
   return (
     <div>
       {err && (
@@ -36,6 +37,10 @@ const ReadingInForumScreen = () => {
           {err}
         </Alert>
       )}
+      <button className="cs-btn cs-fr-btn" onClick={() => history.push('/writing')}>
+        Viết bài
+        <i class="fi-rr-pencil"></i>
+      </button>
       {typeof post == "object" && (
         <ContentWithPaddingXl style={{ paddingTop: 0 }}>
           <div className="cs-fr-post cs-author-info">
@@ -50,6 +55,14 @@ const ReadingInForumScreen = () => {
           </div>
           <HeadingRow>
             <Heading>{post?.title}</Heading>
+            <div className="cs-fr-p-react">
+              <i class="fi-rr-thumbs-up"></i>
+              <span>{post?.likes.length}</span>
+            </div>
+            <div className="cs-fr-p-react">
+              <i class="fi-rr-comment-alt"></i>
+              <span>{post?.comments.length}</span>
+            </div>
           </HeadingRow>
           <Text>
             <p>{post.text}</p>
@@ -60,10 +73,6 @@ const ReadingInForumScreen = () => {
   );
 };
 
-// const ReadingInForumScreen = React.memo(
-//   ReadingInForum,
-//   (prevProps, nextProps) => prevProps === nextProps
-// );
 export default ReadingInForumScreen;
 
 const HeadingRow = tw.div`flex`;
