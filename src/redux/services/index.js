@@ -10,7 +10,7 @@ export const loginService = ({ email, password, callback }) => {
         dispatch(setTokenAction(result));
       })
       .catch((err) => {
-        callback(err);
+        callback(err.toString());
       })
       .finally(() => {
         dispatch(loadingAction(false));
@@ -32,7 +32,7 @@ export const signUpService = ({
         dispatch(setTokenAction(result));
       })
       .catch((err) => {
-        callback(err);
+        callback(err.toString());
       })
       .finally(() => {
         dispatch(loadingAction(false));
@@ -48,7 +48,22 @@ export const getPostInGroup = ({page, callback}) => {
         callback(result, false);
       })
       .catch((err) => {
-        callback("", err);
+        callback("", err.toString());
+      })
+      .finally(() => {
+        dispatch(loadingAction(false));
+      });
+  };
+}
+export const getPostById = ({id, callback}) => {
+  return async (dispatch) => {
+    dispatch(loadingAction(true));
+    await getService(`/api/v1/posts/${id}`)
+      .then((result) => {
+        callback(result, false);
+      })
+      .catch((err) => {
+        callback("", err.toString());
       })
       .finally(() => {
         dispatch(loadingAction(false));

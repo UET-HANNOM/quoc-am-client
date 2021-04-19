@@ -57,7 +57,7 @@ const FooterLayout = () => {
               </SocialLink>
             </SocialLinksContainer>
             <CopyrightText>
-              &copy; Copyright 2020, Treact Inc. All Rights Reserved.
+              &copy; Copyright 2021, UET.
             </CopyrightText>
           </Row>
         </Content>

@@ -12,6 +12,8 @@ import EachBookScreen from "container/screens/Library/EachBook";
 import LoadingBar from "container/layout/loadingbar";
 import { useSelector } from "react-redux";
 import ForumScreen from "container/screens/Forum";
+import ReadingInForumScreen from "container/screens/Forum/Reading";
+
 export const PRIVATE_ROUTER = [];
 export const PUBLIC_ROUTER = [
   { exact: true, path: "/welcome", component: WelcomeScreen },
@@ -20,6 +22,7 @@ export const PUBLIC_ROUTER = [
   { exact: true, path: "/quickscan", component: QuickLookupScreen },
   { exact: true, path: "/library/:idbook", component: EachBookScreen },
   { exact: true, path: "/forum", component: ForumScreen },
+  { exact: true, path: "/forum/:id", component: ReadingInForumScreen },
 ];
 function FadingRoute({ component: Component, myprops = null, ...rest }) {
   return (
@@ -56,8 +59,8 @@ const RouterCenter = () => {
   };
   const path = window.location.pathname;
   const inAuthScreen = path.includes("/auth");
-  const loading = useSelector(state => state.isLoading);
-  const isAuth = useSelector(state => state.isAuth);
+  const loading = useSelector((state) => state.isLoading);
+  const isAuth = useSelector((state) => state.isAuth);
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <LoadingBar load={loading} />
@@ -67,7 +70,7 @@ const RouterCenter = () => {
         <Switch>
           <Redirect exact from="/" to="/welcome" />
           {publicRouter}
-          {!isAuth && <Route exact path="/auth/:type" component={AuthScreen}/>}
+          {!isAuth && <Route exact path="/auth/:type" component={AuthScreen} />}
         </Switch>
       </div>
       {!inAuthScreen && <FooterLayout />}
