@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import tw from "twin.macro";
-import styled from "styled-components";
-import { css } from "styled-components/macro";
+import styled from "styled-components/macro";
 import { useParams } from "react-router";
 import { useDispatch } from "react-redux";
 import { getPostById } from "redux/services";
 import { Alert, AlertTitle } from "@material-ui/lab";
+import moment from "moment"
 export const ContentWithPaddingXl = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
 export const SectionHeading = tw.h1`text-4xl sm:text-5xl font-black tracking-wide text-center`;
 const ReadingInForumScreen = () => {
@@ -37,7 +37,17 @@ const ReadingInForumScreen = () => {
         </Alert>
       )}
       {typeof post == "object" && (
-        <ContentWithPaddingXl style={{paddingTop: 0}}>
+        <ContentWithPaddingXl style={{ paddingTop: 0 }}>
+          <div className="cs-fr-post cs-author-info">
+            <div>
+              <img src="https://source.unsplash.com/random" alt="avt" />
+            </div>
+
+            <div className="cs-fr-p-text">
+              <h3>{"i.title"}</h3>
+              <span>{moment(post?.date).format("LLL")}</span>
+            </div>
+          </div>
           <HeadingRow>
             <Heading>{post?.title}</Heading>
           </HeadingRow>

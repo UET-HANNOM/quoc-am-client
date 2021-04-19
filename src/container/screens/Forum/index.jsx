@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { CircularProgress } from "@material-ui/core";
 import { Alert, AlertTitle, Pagination } from "@material-ui/lab";
 import React, { useEffect, useState } from "react";

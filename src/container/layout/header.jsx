@@ -75,7 +75,7 @@ const HeaderLayout = () => {
     </header>
   );
 };
-const Header = tw.header`
+const Header = tw.div`
   flex justify-between items-center
   max-w-screen-xl mx-auto
 `;

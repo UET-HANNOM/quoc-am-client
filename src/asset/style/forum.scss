@@ -4,27 +4,32 @@
   align-items: center;
   .cs-forum-posts {
     min-height: 90vh;
-    .cs-fr-post {
-      display: flex;
-      flex-direction: row;
-      margin: 1em 2em;
-      margin-right: 20vw;
-      border-bottom: 1px solid gray;
-      padding: 1em;
-      cursor: pointer;
-      img {
-        width: 3em;
-        height: 3em;
-        border-radius: 50%;
-        overflow: hidden;
-      }
-      .cs-fr-p-text {
-        margin-left: 1.5em;
-      }
-    }
   }
 
   .cs-fr-post:hover {
     background-color: #f7fafc;
   }
+}
+.cs-fr-post {
+  display: flex;
+  flex-direction: row;
+  margin: 1em 2em;
+  margin-right: 20vw;
+  border-bottom: 1px solid gray;
+  padding: 1em;
+  cursor: pointer;
+  img {
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .cs-fr-p-text {
+    margin-left: 1.5em;
+  }
+}
+.cs-author-info{
+  border: hidden;
+  margin: 0;
+  padding: 0;
 }

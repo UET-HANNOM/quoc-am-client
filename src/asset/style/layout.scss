@@ -3,6 +3,7 @@
 // }
 .cs-main-body {
   min-height: calc(100vh - 20em);
+  margin-top: 5.5em;
 }
 header {
   padding: 1em;
@@ -25,6 +26,11 @@ header {
   span{
     cursor: pointer;
   }
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: white;
 }
 footer {
   margin-top: 5em;
