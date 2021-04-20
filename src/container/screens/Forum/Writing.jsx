@@ -1,12 +1,16 @@
-import ReactEditor from "container/layout/components/Editor";
-import React from "react";
-const WritingScreen = () => {
-  
-  return (
-    <div>
-      <ReactEditor></ReactEditor>
-    </div>
-  );
-};
+import Editor from 'container/layout/components/Editor'
+import React from 'react'
 
-export default WritingScreen;
+const WritingScreen = () => {
+  return (
+    <div className="cs-writing">
+      <div>
+
+      </div>
+      <input type="text" />
+      <Editor />
+    </div>
+  )
+}
+
+export default WritingScreen
