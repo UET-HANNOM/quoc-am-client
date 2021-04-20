@@ -1,6 +1,6 @@
 import Editor from "container/layout/components/Editor";
+import { ContentWithPaddingXl } from "container/layout/components/GenaralComponent";
 import React from "react";
-import { ContentWithPaddingXl } from "./Reading";
 
 const WritingScreen = () => {
   return (

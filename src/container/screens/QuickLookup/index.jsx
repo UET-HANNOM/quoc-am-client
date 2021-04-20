@@ -1,3 +1,5 @@
+import { ErrorAlert } from "container/layout/components/GenaralComponent";
+import { ResultAfterScan } from "container/layout/components/GenaralComponent";
 import UploadImagePreview from "container/layout/components/UploadImagePreview";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
@@ -6,6 +8,7 @@ const QuickLookupScreen = () => {
   const [image, setImage] = useState();
   const [tranResult, setTranResult] = useState();
   const [err, setErr] = useState();
+  const [tab, setTab] = useState("1");
   const dispatch = useDispatch();
   const _onChange = (e) => {
     var file = e.target.files[0];
@@ -31,25 +34,35 @@ const QuickLookupScreen = () => {
     };
     dispatch(scanImageService(body));
   };
+  const changeTabResult = (event, newValue) => {
+    setTab(newValue);
+  };
+  const otherImage = () => {
+    setImage(null);
+    setTranResult(null);
+  };
   return (
     <div className="cs-quick-scan">
       {tranResult ? (
         <div className="cs-q-c-result">
-          <div className="cs-q-c-right">
-            <img src={image} alt="" />
-            <label className="cs-btn ">Ảnh khác</label>
-            <div className="cs-q-c-search" onClick={() => alert("dmm")}>
-              <i class="fi-rr-interactive"></i>
-              <p>Tra cứu</p>
-            </div>
-          </div>
-          <i class="fi-rr-arrow-small-right"></i>
           <div className="cs-q-c-left">
-            <p>{tranResult}</p>
+            <ResultAfterScan
+              data={tranResult}
+              value={tab}
+              handleChange={changeTabResult}
+              image={image}
+            />
+            <button className="cs-btn " htmlFor="img" onClick={otherImage}>
+              Ảnh khác
+            </button>
           </div>
         </div>
       ) : (
         <>
+          <h2 style={{ marginTop: "2em" }}>
+            Tải lên một bức ảnh chứa ký tự Hán - Nôm
+          </h2>
+          <p>Chúng tôi sẽ quét bức ảnh và giúp bạn đọc nó</p>
           <div>
             <UploadImagePreview _onChange={_onChange} image={image} />
           </div>
@@ -59,8 +72,9 @@ const QuickLookupScreen = () => {
             hidden={!image}
             onClick={scanImage}
           >
-            Dịch
+            Quét Và Dịch
           </button>
+          {err && <ErrorAlert err={err} />}
         </>
       )}
     </div>
@@ -68,3 +82,4 @@ const QuickLookupScreen = () => {
 };
 
 export default QuickLookupScreen;
+

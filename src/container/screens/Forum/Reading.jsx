@@ -7,7 +7,7 @@ import { getPostById, postComment } from "redux/services";
 import { Alert, AlertTitle } from "@material-ui/lab";
 import moment from "moment";
 import TextareaAutosize from "react-textarea-autosize";
-export const ContentWithPaddingXl = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
+import { ContentWithPaddingXl } from "container/layout/components/GenaralComponent";
 export const SectionHeading = tw.h1`text-4xl sm:text-5xl font-black tracking-wide text-center`;
 const ReadingInForumScreen = () => {
   const [post, setPost] = useState();

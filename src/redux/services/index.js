@@ -1,5 +1,5 @@
 import { getService, postService } from "container/common/callApi";
-import { loadingAction, setTokenAction } from "redux/actions";
+import { loadingAction, setSDataAction, setTokenAction } from "redux/actions";
 
 export const loginService = ({ email, password, callback }) => {
   return async (dispatch) => {
@@ -75,6 +75,7 @@ export const postComment = ({id, text, callback}) => {
     dispatch(loadingAction(true));
     await postService(`/api/v1/posts/comments/${id}`, {text})
       .then((result) => {
+        dispatch(setSDataAction(result))
         callback(result, false);
       })
       .catch((err) => {

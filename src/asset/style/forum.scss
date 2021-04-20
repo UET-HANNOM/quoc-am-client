@@ -44,54 +44,54 @@
     margin-bottom: 1em;
     margin-right: 1em;
   }
-  .cs-fr-list-cmt {
-    margin: 1em 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    img {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      overflow: hidden;
-      margin-right: 1em;
-    }
-  }
-  .cs-fr-writing-cmt {
-    margin-top: 2em;
-    border: 1px solid thistle;
-    border-radius: 8px;
+}
+.cs-fr-list-cmt {
+  margin: 1em 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
     overflow: hidden;
-    button:first-child {
-      width: 100%;
-      height: 3.5em;
-      background-color: white;
-      outline: none;
-      border: hidden;
-      font-size: 110%;
-      font-weight: bolder;
+    margin-right: 1em;
+  }
+}
+.cs-fr-writing-cmt {
+  margin-top: 2em;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  overflow: hidden;
+  button:first-child {
+    width: 100%;
+    height: 3.5em;
+    background-color: white;
+    outline: none;
+    border: hidden;
+    font-size: 110%;
+    font-weight: bolder;
+  }
+  div:first-child {
+    margin: 0;
+    border: hidden;
+    .cs-fr-p-text {
+      flex: 6;
     }
-    div:first-child {
-      margin: 0;
+    button {
+      outline: none;
+      // height: 1em;
+      padding: 0 1.8em;
       border: hidden;
-      .cs-fr-p-text {
-        flex: 6;
-      }
-      button {
-        outline: none;
-        // height: 1em;
-        padding: 0 1.8em;
-        border: hidden;
-        border-radius: 8px;
-        color: white;
-        background-color: rgb(100, 21, 255);
-      }
-      textarea {
-        width: 100%;
-        border: hidden;
-        outline: 1px solid thistle;
-        padding: 1em;
-      }
+      border-radius: 8px;
+      color: white;
+      background-color: rgb(100, 21, 255);
+    }
+    textarea {
+      width: 100%;
+      border: hidden;
+      outline: 1px solid #e1e4e8;
+      padding: 1em;
     }
   }
 }
@@ -121,7 +121,7 @@
     width: 100%;
     justify-content: space-between;
     margin-bottom: 1em;
-    button{
+    button {
       padding: 0 2em;
       border-radius: 8px;
       border: hidden;
@@ -129,7 +129,7 @@
       color: white;
       background-color: rgb(100, 21, 255);
     }
-  
+
     input {
       width: 80%;
       // height: 20px;
