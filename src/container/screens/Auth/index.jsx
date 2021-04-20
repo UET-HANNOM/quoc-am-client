@@ -23,7 +23,7 @@ const AuthScreen = () => {
   const [errMess, setErrMess] = useState("");
   const dispatch = useDispatch();
   const history = useHistory();
-  const { type } = useParams();
+  const { type, from } = useParams();
   const handleChange = (event) => {
     setUserInfo({
       ...userInfo,
@@ -38,7 +38,11 @@ const AuthScreen = () => {
       password: userInfo.password,
       callback: (success) => {
         if (success === true) {
-          history.push("/welcome");
+          if (from) {
+            history.push(`/forum/${from}`);
+          } else {
+            history.push("/welcome");
+          }
         } else {
           setErrMess(success);
         }

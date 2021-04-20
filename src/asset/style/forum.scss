@@ -28,22 +28,84 @@
     margin-left: 1.5em;
   }
 }
-.cs-author-info{
+.cs-author-info {
   border: hidden;
   margin: 0;
   padding: 0;
 }
-.cs-fr-p-react{
-  margin:0 1.2em;
+.cs-fr-main-contain {
+  padding: 0 !important;
+  min-height: 50vh;
+}
+.cs-fr-comment {
+  margin: 2em 20em;
+  hr{
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    margin-right: 1em;
+  }
+  .cs-fr-list-cmt {
+    margin: 1em 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    img{
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 1em;
+    }
+  }
+  .cs-fr-writing-cmt {
+    margin-top: 2em;
+    border: 1px solid thistle;
+    border-radius: 8px;
+    overflow: hidden;
+    button:first-child {
+      width: 100%;
+      height: 3.5em;
+      background-color: white;
+      outline: none;
+      border: hidden;
+      font-size: 110%;
+      font-weight: bolder;
+    }
+    div:first-child {
+      margin: 0;
+      border: hidden;
+      .cs-fr-p-text {
+        flex: 6;
+      }
+      button {
+        outline: none;
+        // height: 1em;
+        padding: 0 1.8em;
+        border: hidden;
+        border-radius: 8px;
+        color: white;
+        background-color: rgb(100, 21, 255);
+      }
+      textarea {
+        width: 100%;
+        border: hidden;
+        outline: 1px solid thistle;
+        padding: 1em;
+      }
+    }
+  }
+}
+.cs-fr-p-react {
+  margin: 0 1.2em;
   display: flex;
   justify-content: center;
   cursor: pointer;
-  span{
+  span {
     margin: 0;
     line-height: 1;
   }
 }
-.cs-fr-btn{
+.cs-fr-btn {
   width: 10em;
   float: right;
   margin-right: 2em;
@@ -52,9 +114,9 @@
   padding-left: 2em;
   justify-content: space-around;
 }
-.cs-writing{
+.cs-writing {
   padding: 3em;
 }
-.ck-content{
+.ck-content {
   padding: 1em 3em !important;
 }

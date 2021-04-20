@@ -2,12 +2,7 @@ import axios from "axios";
 import { store } from "redux/store";
 
 export const HOST_API = "https://quoc-am-server.herokuapp.com";
-// const RESPONSE_STATUS = {
-//   SUCCESS: 200,
-//   BAD_REQUEST: 400,
-//   INTERNAL_SERVER_ERROR: 500,
-//   FORBIDDEN: 403,
-// };
+
 export const postService = async (url, body) => { debugger
   try {
     const headers = {

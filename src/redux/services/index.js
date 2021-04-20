@@ -7,7 +7,7 @@ export const loginService = ({ email, password, callback }) => {
     await postService("/api/auth", { email, password })
       .then((result) => {
         callback(true);
-        dispatch(setTokenAction(result));
+        dispatch(setTokenAction(result.token));
       })
       .catch((err) => {
         callback(err.toString());
@@ -59,6 +59,21 @@ export const getPostById = ({id, callback}) => {
   return async (dispatch) => {
     dispatch(loadingAction(true));
     await getService(`/api/v1/posts/${id}`)
+      .then((result) => {
+        callback(result, false);
+      })
+      .catch((err) => {
+        callback("", err.toString());
+      })
+      .finally(() => {
+        dispatch(loadingAction(false));
+      });
+  };
+}
+export const postComment = ({id, text, callback}) => {
+  return async (dispatch) => {
+    dispatch(loadingAction(true));
+    await postService(`/api/v1/posts/comments/${id}`, {text})
       .then((result) => {
         callback(result, false);
       })

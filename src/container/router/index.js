@@ -72,7 +72,7 @@ const RouterCenter = () => {
         <Switch>
           <Redirect exact from="/" to="/welcome" />
           {publicRouter}
-          {!isAuth && <Route exact path="/auth/:type" component={AuthScreen} />}
+          {!isAuth && <Route exact path="/auth/:type/:from" component={AuthScreen} />}
         </Switch>
       </div>
       {!inAuthScreen && <FooterLayout />}
