@@ -1,16 +1,18 @@
-import Editor from 'container/layout/components/Editor'
-import React from 'react'
+import Editor from "container/layout/components/Editor";
+import React from "react";
+import { ContentWithPaddingXl } from "./Reading";
 
 const WritingScreen = () => {
   return (
-    <div className="cs-writing">
-      <div>
-
+    <ContentWithPaddingXl className="cs-writing">
+      <div></div>
+      <div className="cs-write-head">
+        <input type="text" placeholder="Tiêu đề" />
+        <button disabled >Đăng</button>
       </div>
-      <input type="text" />
       <Editor />
-    </div>
-  )
-}
+    </ContentWithPaddingXl>
+  );
+};
 
-export default WritingScreen
+export default WritingScreen;

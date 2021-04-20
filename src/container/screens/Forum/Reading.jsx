@@ -17,6 +17,7 @@ const ReadingInForumScreen = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     getPost();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
   const getPost = () => {
     let body = {
@@ -42,6 +43,7 @@ const ReadingInForumScreen = () => {
       id: id,
       text: cmt,
       callback: (res, err) => {
+        setCmt("");
         if (err) {
           setErr(err);
         } else {
@@ -99,7 +101,7 @@ const ReadingInForumScreen = () => {
             </Text>
           </ContentWithPaddingXl>
 
-          <div className="cs-fr-comment">
+          <ContentWithPaddingXl className="cs-fr-comment">
             <h2>Bình Luận</h2>
             {post?.comments.map((i) => (
               <div>
@@ -107,13 +109,11 @@ const ReadingInForumScreen = () => {
                   <img src="https://source.unsplash.com/random" alt="avt" />
                   <div>
                     <h4>{i.name}</h4>
-                    <span>
-                    {moment(post?.comments?.date).format("LLL")}
-                    </span>
+                    <span>{moment(post?.comments?.date).format("LLL")}</span>
                   </div>
                 </div>
                 <p>{i.text}</p>
-                <hr/>
+                <hr />
               </div>
             ))}
             <div className="cs-fr-writing-cmt">
@@ -134,7 +134,9 @@ const ReadingInForumScreen = () => {
                     <div className="cs-fr-p-text">
                       <h3>{"i.title"}</h3>
                     </div>
-                    <button onClick={postCmt}>Đăng</button>
+                    <button onClick={postCmt} disabled={cmt === ""}>
+                      Đăng
+                    </button>
                   </div>
                   <TextareaAutosize
                     name="write-cmt"
@@ -145,7 +147,7 @@ const ReadingInForumScreen = () => {
                 </div>
               )}
             </div>
-          </div>
+          </ContentWithPaddingXl>
         </>
       )}
     </div>

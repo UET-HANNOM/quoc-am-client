@@ -85,3 +85,19 @@ export const postComment = ({id, text, callback}) => {
       });
   };
 }
+
+export const scanImageService = ({image, callback}) => {
+  return async (dispatch) => {
+    dispatch(loadingAction(true));
+    await postService(`/sampleData`, {image})
+      .then((result) => {
+        callback(result, false);
+      })
+      .catch((err) => {
+        callback("", err.toString());
+      })
+      .finally(() => {
+        dispatch(loadingAction(false));
+      });
+  };
+}

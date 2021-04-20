@@ -77,8 +77,12 @@ a {
 }
 button {
   cursor: pointer;
+  opacity: 0.5;
 }
 
+button:enabled{
+  opacity: 1;
+}
 .cs-avt {
   width: 3em;
   height: 3em;
