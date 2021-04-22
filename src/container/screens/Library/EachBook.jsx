@@ -21,7 +21,9 @@ const EachBookScreen = () => {
         {typeView && <BookInfo viewAll={viewAll} viewOne={viewOne} />}
       </div>
 
-      {typeView ? (
+      {!typeView ? (
+        <OnePageView data={sample} />
+      ) : shortList ? (
         <div className="cs-eb-list-page">
           {arr.map((i) => (
             <div>
@@ -29,9 +31,7 @@ const EachBookScreen = () => {
             </div>
           ))}
         </div>
-      ) : (
-        <OnePageView data={sample} />
-      )}
+      ) : null}
       <h2>Bình Luận</h2>
       {/* {post?.comments.map((i) => ( */}
       <div>

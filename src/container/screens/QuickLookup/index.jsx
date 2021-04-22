@@ -11,7 +11,7 @@ const QuickLookupScreen = () => {
   const [tab, setTab] = useState("1");
   const dispatch = useDispatch();
   const _onChange = (e) => {
-    var file = e.target.files[0];
+    var file = e.target.files[0];debugger;
     var reader = new FileReader();
     var url = reader.readAsDataURL(file);
 
