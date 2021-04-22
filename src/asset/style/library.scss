@@ -5,7 +5,7 @@
   .cs-library-card {
     height: 50vh;
     width: 20vw;
-    border: 0.5px solid thistle;
+    border: 0.5px solid #e1e4e8;
     border-radius: 8px;
     margin: 2em;
     display: flex;
@@ -51,7 +51,7 @@
     }
     button {
       flex: 1;
-      border: 0.5px solid thistle;
+      border: 0.5px solid #e1e4e8;
       border-end-end-radius: 8px;
       outline: none;
       border: none;
@@ -62,13 +62,53 @@
     }
   }
 }
-.cs-eachbook{
-  .cs-eb-desc{
-    // background-color: yellow;
-    padding: 0 5em;
-    height: 50vh;
-    img{
-      width: 20vw;
+.cs-eachbook {
+  .cs-eb-desc {
+    img {
+      height: 450px;
     }
+    .cs-eb-btn {
+      display: flex;
+      flex-direction: row;
+      button {
+        margin: 1em 2em;
+      }
+    }
+  }
+  h2{
+    margin-bottom: 2em;
+  }
+  // background-color: aqua;
+  // overflow-y: hidden;
+}
+//#e1e4e8
+.cs-eb-list-page {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  align-items: center;
+  div {
+    width: 95%;
+    height: 200px;
+    margin: 0.5em 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.cs-eb-one-page {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3em;
+  // overflow-y: hidden;
+  i {
+    font-size: 300%;
+    margin: 1em;
+    cursor: pointer;
+  }
+  .cs-tab-view {
+    width: 100%;
   }
 }

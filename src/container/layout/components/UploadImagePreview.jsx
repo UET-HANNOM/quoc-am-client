@@ -1,17 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 
-const UploadImagePreview = () => {
-  const [image, setImage] = useState();
-  const _onChange = (e) => {
-    var file = e.target.files[0];
-    var reader = new FileReader();
-    var url = reader.readAsDataURL(file);
-
-    reader.onloadend = function (e) {
-       setImage(reader.result)
-     }.bind();
-    console.log(url)
-  }
+const UploadImagePreview = ({image, _onChange}) => {
+ 
   return (
     <div className={`cs-upload-image-preview ${image ? "cs-preview" : ""}`}>
       <label htmlFor="img" className="cs-upload-icon">

@@ -3,10 +3,10 @@
 // }
 .cs-main-body {
   min-height: calc(100vh - 20em);
+  margin-top: 5.5em;
 }
 header {
   padding: 1em;
-  margin-bottom: 1em;
   a {
     text-decoration: none;
     font-size: 120%;
@@ -19,9 +19,21 @@ header {
   .header-title {
     color: rgb(100, 21, 255);
   }
+  .cs-nav{
+    display: flex;
+    align-items: center;
+  }
+  span{
+    cursor: pointer;
+  }
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: white;
 }
 footer {
-  margin-top: 10em;
+  margin-top: 5em;
   a {
     color: white;
     line-height: unset;

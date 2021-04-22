@@ -1,11 +1,12 @@
 import {handleActions} from 'redux-actions';
-import { loadingAction, playIntroAction, setAuthAction, setTokenAction } from '../actions';
+import { loadingAction, playIntroAction, setAuthAction, setSDataAction, setTokenAction } from '../actions';
 const initialState = {
   isLoading: false,
   playIntro: false,
   isAuth: false,
   useInfo: {},
   token: "",
+  sample:{},
 };
 export default handleActions(
   {
@@ -19,11 +20,16 @@ export default handleActions(
     }),
     [setTokenAction.toString()]: (state, {payload})=>({
       ...state,
-      token: payload
+      token: payload,
+      isAuth: true,
     }),
     [setAuthAction.toString()]: (state, {payload})=>({
       ...state,
       useInfo: payload.useInfo,
+    }),
+    [setSDataAction.toString()]: (state, {payload})=>({
+      ...state,
+      sample: payload,
     }),
   },
   initialState,
