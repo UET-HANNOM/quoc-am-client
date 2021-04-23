@@ -4,6 +4,7 @@ import { BookInfo } from "container/screens/Library/BookInfo";
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import TextareaAutosize from "react-textarea-autosize";
+import sm from './LienPhai-2502.jpg'
 const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 const EachBookScreen = () => {
   const [typeView, setTypeView] = useState(true); // true is view all, false is view one

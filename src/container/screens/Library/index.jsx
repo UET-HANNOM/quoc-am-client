@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router";
-
+import sm from './LienPhai-2502.jpg'
 const LibraryScreen = () => {
   const [showInfoId, setShowInfoId] = useState(null);
   const showInfo = (id) => {
@@ -19,7 +19,7 @@ const LibraryScreen = () => {
       {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((i) => (
         <div className="cs-library-card" onClick={() => goto(i)}>
           <div className="cs-l-c-img">
-            <img src="https://source.unsplash.com/random" alt="" />
+            <img src={sm} alt="" />
             <i
               class={showInfoId === i ? "fi-rr-cross-circle" : "fi-rr-info"}
               onClick={() => showInfo(i)}

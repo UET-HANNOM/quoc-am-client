@@ -80,7 +80,7 @@ button {
   opacity: 0.5;
 }
 
-button:enabled{
+button:enabled {
   opacity: 1;
 }
 .cs-avt {
@@ -89,4 +89,28 @@ button:enabled{
   border-radius: 50%;
   overflow: hidden;
   cursor: pointer;
+}
+.cs-each-word {
+  position: relative;
+  // width: 1em;
+  display: inline-block;
+  div {
+    position: absolute;
+    // display: none;
+    top: -2.9em;
+    transform: translateX(-18%);
+    // transform: translateX(-50%);
+    z-index: 100;
+    opacity: 1;
+    width: 100%;
+    padding: 0.8em;
+    span {
+      width: 100%;
+      i {
+        display: inline;
+        font-size: 80%;
+        color: rgb(100, 21, 255);
+      }
+    }
+  }
 }

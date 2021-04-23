@@ -1,5 +1,12 @@
 import { Button, Paper, Tab } from "@material-ui/core";
-import { Alert, AlertTitle, TabContext, TabList, TabPanel } from "@material-ui/lab";
+import {
+  Alert,
+  AlertTitle,
+  TabContext,
+  TabList,
+  TabPanel,
+} from "@material-ui/lab";
+import { useState } from "react";
 import tw from "twin.macro";
 export const ContentWithPaddingXl = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
 export const ErrorAlert = ({ err }) => {
@@ -10,9 +17,23 @@ export const ErrorAlert = ({ err }) => {
     </Alert>
   );
 };
-export const ResultAfterScan = ({ data, value, handleChange, image, csclass = "" }) => {
+export const ResultAfterScan = ({
+  data,
+  value,
+  handleChange,
+  image,
+  csclass = "",
+}) => {
+  const [word, setWord] = useState(null);
+  const handleViewWord = (key) => {
+    if(key !== word){
+      setWord(() => key)
+    }else{
+      setWord(() => null)
+    }
+  }
   return (
-    <Paper square className={csclass} >
+    <Paper square className={csclass}>
       <TabContext value={value}>
         <TabList
           indicatorColor="primary"
@@ -29,8 +50,21 @@ export const ResultAfterScan = ({ data, value, handleChange, image, csclass = ""
           {String(data.text2)
             .replaceAll(" ", "")
             .split("")
-            .map((i) => (
-              <Button>{i}</Button>
+            .map((i, key) => (
+              <div className="cs-each-word">
+                {word === key && (
+                  <div>
+                    <Paper elevation={3}>
+                      Nghĩa: ..., <br />{" "}
+                      <span>
+                        Đọc: <i class="fi-rr-volume"></i>
+                      </span>{" "}
+                      <br /> Link: ...
+                    </Paper>
+                  </div>
+                )}
+                <Button onClick={() => handleViewWord(key)}>{i}</Button>
+              </div>
             ))}
         </TabPanel>
         <TabPanel value="3">
