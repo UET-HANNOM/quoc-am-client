@@ -28,7 +28,7 @@ const EachBookScreen = () => {
         <div className="cs-eb-list-page">
           {arr.map((i) => (
             <div>
-              <img src="https://source.unsplash.com/random" alt="" />
+              <img src="sm" alt="" />
             </div>
           ))}
         </div>
