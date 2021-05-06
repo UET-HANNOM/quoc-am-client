@@ -1,7 +1,7 @@
 import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components/macro";
-
+import sm from './LienPhai-2502.jpg'
 export const BookInfo = ({viewAll, viewOne}) => {
   const defaultStatistics = [
     {
@@ -13,7 +13,7 @@ export const BookInfo = ({viewAll, viewOne}) => {
     <div>
       <TwoColumn css={tw`md:items-center`}>
         <ImageColumn>
-          <img src="https://source.unsplash.com/random" alt="" />
+          <img src={sm} alt="" />
         </ImageColumn>
         <TextColumn>
           <TextContent>
